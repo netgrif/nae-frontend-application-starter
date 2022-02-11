@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="361px" style="background-color: rgb(255, 255, 255);" version="1.1" viewBox="-0.5 -0.5 362 361" width="362px"
+     xmlns="http://www.w3.org/2000/svg">
+  <defs/>
+  <g>
+    <rect fill="#d2d2d2" height="40" pointer-events="all" stroke="#d2d2d2" width="40" x="80" y="160"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="none" width="40" x="40" y="200"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="#eeeeee" width="40" x="0" y="160"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="#eeeeee" width="40" x="0" y="240"/>
+    <rect fill="#5c35b0" height="40" pointer-events="all" stroke="#5c35b0" width="40" x="0" y="200"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="none" width="40" x="160" y="40"/>
+    <rect fill="#2297f4" height="40" pointer-events="all" stroke="#2297f4" width="40" x="160" y="0"/>
+    <rect fill="#5c35b0" height="40" pointer-events="all" stroke="none" width="40" x="120" y="80"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="none" width="40" x="80" y="120"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="none" width="40" x="80" y="80"/>
+    <rect fill="#2297f4" height="80" pointer-events="all" stroke="#2297f4" width="80" x="0" y="80"/>
+    <rect fill="#d2d2d2" height="80" pointer-events="all" stroke="#d2d2d2" width="80" x="80" y="0"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="none" width="40" x="200" y="40"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="none" width="40" x="240" y="0"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="none" width="40" x="320" y="0"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="none" width="40" x="120" y="120"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="none" width="40" x="40" y="240"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="none" width="40" x="80" y="240"/>
+    <rect fill="#eeeeee" height="40" pointer-events="all" stroke="#eeeeee" width="40" x="0" y="320"/>
+    <rect fill="#13b0d4" height="80" pointer-events="all" stroke="#13b0d4" width="80" x="0" y="0"/>
+  </g>
+</svg>

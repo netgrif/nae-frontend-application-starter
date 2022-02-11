@@ -1,0 +1,24 @@
+@import '~@angular/material/theming';
+@import 'custom-light-theme.scss';
+@import '~@covalent/core/theming/all-theme';
+@import '~@covalent/markdown/markdown-theme';
+
+@import '~@netgrif/components/nae-theme';
+
+$typography: mat-typography-config(
+  $font-family: 'Roboto, monospace',
+  $headline: mat-typography-level(32px, 48px, 700)
+);
+
+@include mat-core($typography);
+
+$custom-light-theme: mat-light-theme(
+    mat-palette($bv-light-primary),
+    mat-palette($bv-light-secondary),
+    mat-palette($bv-light-warn)
+);
+@include angular-material-theme($custom-light-theme);
+@include nae-lib-theme($custom-light-theme, $typography);
+
+
+

@@ -1,0 +1,41 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+@import './styles/themes/custom-themes.scss';
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.app-loading {
+  @keyframes fadeInFromNone {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+
+    1% {
+      display: block;
+      opacity: 0;
+    }
+
+    100% {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    animation: 1s ease-out 0s 1 fadeInFromNone;
+    // this way asset gets processed by webpack
+    background: url(./assets/logo.png) center center no-repeat;
+  }
+}

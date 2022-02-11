@@ -1,0 +1,203 @@
+{
+  "$schema": "node_modules/@netgrif/application-engine/src/schema/nae-schema.json",
+  "extends": "nae-default",
+  "providers": {
+    "auth": {
+      "address": "http://localhost:8080/api",
+      "authentication": "Basic",
+      "endpoints": {
+        "login": "/auth/login",
+        "logout": "/auth/logout",
+        "signup": "/auth/signup"
+      },
+      "sessionBearer": "X-Auth-Token"
+    },
+    "resources": [
+      {
+        "name": "main",
+        "address": "http://localhost:8080/api"
+      },
+      {
+        "name": "case",
+        "address": "http://localhost:8080/api"
+      },
+      {
+        "name": "task",
+        "address": "http://localhost:8080/api"
+      },
+      {
+        "name": "petrinet",
+        "address": "http://localhost:8080/api"
+      },
+      {
+        "name": "user",
+        "address": "http://localhost:8080/api"
+      }
+    ]
+  },
+  "views": {
+    "login": {
+      "layout": {
+        "name": "login",
+        "componentName": "Login"
+      },
+      "component": {
+        "class": "LoginComponent",
+        "from": "./views/login/login.component"
+      },
+      "access": "public",
+      "navigation": false,
+      "routing": {
+        "path": "login"
+      }
+    },
+    "side-nav": {
+      "layout": {
+        "name": "sidenavView",
+        "componentName": "Sidenav",
+        "params": {
+          "user": true,
+          "quickPanel": true,
+          "navigation": true
+        }
+      },
+      "component": {
+        "class": "SidenavComponent",
+        "from": "./views/side-nav/side-nav-sidenav-view.component"
+      },
+      "access": "private",
+      "navigation": false,
+      "routing": {
+        "path": ""
+      },
+      "children": {
+        "cases": {
+          "layout": {
+            "name": "caseView",
+            "params": {},
+            "enableCaseTitle": true,
+            "isCaseTitleRequired": true
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "home",
+            "title": "All Cases"
+          },
+          "routing": {
+            "path": "cases"
+          }
+        },
+        "tasks": {
+          "layout": {
+            "name": "taskView",
+            "params": {}
+          },
+          "access": "private",
+          "navigation": true,
+          "routing": {
+            "path": "tasks"
+          }
+        },
+        "tabViewAllCase": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "tabViewAllCase",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "All Cases"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                },
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "face",
+                    "text": "My Cases"
+                  },
+                  "canBeClosed": false,
+                  "order": -1
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "title": "Tab View"
+          },
+          "routing": {
+            "path": "tabView"
+          }
+        },
+        "emptyView": {
+          "layout": {
+            "name": "emptyView",
+            "componentName": "EmptyView"
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "clear",
+            "title": "EmptyView"
+          },
+          "routing": {
+            "path": "settings"
+          }
+        }
+      }
+    }
+  },
+  "theme": {
+    "name": "default",
+    "pallets": {
+      "light": {
+        "primary": "#2196F3",
+        "secondary": "#FFC107",
+        "warn": "red"
+      }
+    }
+  },
+  "assets": [
+    "src/assets"
+  ],
+  "filters": {
+    "all-cases": {
+      "title": "All Cases",
+      "access": "public",
+      "query": {},
+      "type": "Case"
+    }
+  },
+  "i18n": [
+    "sk-SK",
+    "de-DE",
+    "en-US"
+  ],
+  "services": {
+    "auth": {
+      "logoutRedirect": "login",
+      "loginRedirect": "login"
+    },
+    "log": {
+      "level": "DEBUG",
+      "logWithDate": true,
+      "serializeExtraParams": true,
+      "includeLogLevel": true,
+      "publishers": [
+        "console"
+      ]
+    }
+  }
+}

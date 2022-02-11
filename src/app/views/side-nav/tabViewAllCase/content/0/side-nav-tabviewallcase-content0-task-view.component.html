@@ -1,0 +1,9 @@
+<div class="task-tab-background full-height">
+  <div class="content-margin full-height" fxLayout="column" fxLayoutAlign="start stretch">
+    <mat-card class="search-panel">
+      <nc-search class="search-width"></nc-search>
+    </mat-card>
+    <nc-header #header class="task-panel-padding-mini" type="task"></nc-header>
+    <nc-task-list [loading$]="loading$" [selectedHeaders$]="selectedHeaders$" [tasks$]="tasks$" fxFlex></nc-task-list>
+  </div>
+</div>
