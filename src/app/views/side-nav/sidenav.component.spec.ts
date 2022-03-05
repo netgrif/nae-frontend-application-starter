@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {SidenavComponent} from './sidenav.component';
-import {AuthenticationMethodService, ConfigurationService, MaterialModule} from '@netgrif/application-engine';
+import {AuthenticationMethodService, ConfigurationService, MaterialModule} from '@netgrif/components-core';
 import {NavigationComponentModule, ToolbarComponentModule} from '@netgrif/components';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {RouterTestingModule} from '@angular/router/testing';

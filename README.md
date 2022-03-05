@@ -1,6 +1,6 @@
 # Netgrif Application Engine Backend Starter
 
-This project is starter for [Netgrif Application Engine](https://github.com/netgrif/application-engine) 
+This project is starter for [Netgrif Application Engine](https://github.com/netgrif/components) 
 
 ---
 

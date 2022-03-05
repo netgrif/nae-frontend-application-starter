@@ -16,8 +16,8 @@ import {
   tabbedTaskViewConfigurationFactory,
   TaskViewService,
   ViewIdService
-} from '@netgrif/application-engine';
-import {HeaderComponent,} from '@netgrif/components';
+} from '@netgrif/components-core';
+import {HeaderComponent} from '@netgrif/components';
 
 const baseFilterFactory = (injectedTabData: InjectedTabbedTaskViewData) => {
   return {

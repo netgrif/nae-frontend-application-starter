@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AuthenticationService, LanguageService, RoutingBuilderService} from '@netgrif/application-engine';
+import {AuthenticationService, LanguageService, RoutingBuilderService} from '@netgrif/components-core';
 
 @Component({
   selector: 'app-root',

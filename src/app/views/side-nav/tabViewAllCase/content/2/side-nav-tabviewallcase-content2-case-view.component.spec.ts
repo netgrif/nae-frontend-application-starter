@@ -7,7 +7,7 @@ import {
   MaterialModule,
   MockAuthenticationMethodService,
   NAE_TAB_DATA
-} from '@netgrif/application-engine';
+} from '@netgrif/components-core';
 import {HeaderComponentModule} from '@netgrif/components';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {HttpClientTestingModule} from '@angular/common/http/testing';

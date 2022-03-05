@@ -1,5 +1,5 @@
 {
-  "$schema": "node_modules/@netgrif/application-engine/src/schema/nae-schema.json",
+  "$schema": "node_modules/@netgrif/components-core/src/schema/nae-schema.json",
   "extends": "nae-default",
   "providers": {
     "auth": {
@@ -80,7 +80,7 @@
           },
           "access": "private",
           "navigation": {
-            "icon": "home",
+            "icon": "fact_check",
             "title": "All Cases"
           },
           "routing": {
@@ -93,7 +93,10 @@
             "params": {}
           },
           "access": "private",
-          "navigation": true,
+          "navigation": {
+            "icon": "assignment",
+            "title": "All Tasks"
+          },
           "routing": {
             "path": "tasks"
           }
@@ -136,6 +139,7 @@
           },
           "access": "private",
           "navigation": {
+            "icon": "tab",
             "title": "Tab View"
           },
           "routing": {
@@ -148,12 +152,9 @@
             "componentName": "EmptyView"
           },
           "access": "private",
-          "navigation": {
-            "icon": "clear",
-            "title": "EmptyView"
-          },
+          "navigation": true,
           "routing": {
-            "path": "settings"
+            "path": "empty"
           }
         }
       }

@@ -13,8 +13,8 @@ import {
   SimpleFilter,
   TaskViewService,
   ViewIdService
-} from '@netgrif/application-engine';
-import {HeaderComponent,} from '@netgrif/components';
+} from '@netgrif/components-core';
+import {HeaderComponent} from '@netgrif/components';
 
 const localAllowedNetsFactory = (factory: AllowedNetsServiceFactory) => {
   return factory.createFromConfig('side-nav/tasks');

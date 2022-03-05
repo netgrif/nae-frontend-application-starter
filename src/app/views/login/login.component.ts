@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NAE_VIEW_ID_SEGMENT, SnackBarService, User, UserService, ViewIdService} from '@netgrif/application-engine';
+import {NAE_VIEW_ID_SEGMENT, SnackBarService, User, UserService, ViewIdService} from '@netgrif/components-core';
 import {Router} from '@angular/router';
 
 @Component({

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
-import {ConfigurationService, LoggerService, ViewService} from '@netgrif/application-engine';
+import {ConfigurationService, LoggerService, ViewService} from '@netgrif/components-core';
 import {LoginComponent} from './views/login/login.component';
 import {SidenavComponent} from './views/side-nav/sidenav.component';
 import {SideNavCasesCaseViewComponent} from './views/side-nav/cases/side-nav-cases-case-view.component';

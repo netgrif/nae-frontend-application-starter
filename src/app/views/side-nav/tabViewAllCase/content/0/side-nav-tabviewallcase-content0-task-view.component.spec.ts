@@ -7,8 +7,8 @@ import {
   MaterialModule,
   NAE_TAB_DATA,
   SimpleFilter
-} from '@netgrif/application-engine';
-import {HeaderComponentModule, PanelComponentModule,} from '@netgrif/components';
+} from '@netgrif/components-core';
+import {HeaderComponentModule, PanelComponentModule} from '@netgrif/components';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TemplateFrontendConfigurationService} from '../../../../../template-frontend-configuration.service';
 

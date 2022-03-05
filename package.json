@@ -4,15 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "env NG_BUILD_MANGLE=false NG_BUILD_MINIFY=true NG_BUILD_BEAUTIFY=true ng build --prod",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
-    "@netgrif/application-engine": "~6.0.0-rc.6",
-    "@netgrif/components": "~6.0.0-rc.6",
+    "@netgrif/components-core": "~6.0.1",
+    "@netgrif/components": "~6.0.1",
     "@angular-material-components/datetime-picker": "~4.0.5",
     "@angular-material-components/moment-adapter": "~4.0.1",
     "@angular/animations": "~10.2.3",

@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {LoginComponent} from './login.component';
-import {AuthenticationMethodService, ConfigurationService} from '@netgrif/application-engine';
+import {AuthenticationMethodService, ConfigurationService} from '@netgrif/components-core';
 import {LoginFormComponentModule} from '@netgrif/components';
 import {TemplateFrontendConfigurationService} from '../../template-frontend-configuration.service';
 import {HttpClientTestingModule} from '@angular/common/http/testing';

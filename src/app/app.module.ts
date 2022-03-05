@@ -3,7 +3,13 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {AuthenticationModule, ConfigurationService, MaterialModule, TranslateLibModule, ViewService,} from '@netgrif/application-engine';
+import {
+  AuthenticationModule,
+  ConfigurationService,
+  MaterialModule,
+  TranslateLibModule,
+  ViewService,
+} from '@netgrif/components-core';
 import {FlexLayoutModule, FlexModule} from '@angular/flex-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
@@ -78,7 +84,9 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
     {provide: ViewService, useClass: TemplateFrontendViewService}
   ],
   bootstrap: [AppComponent],
-  entryComponents: [NewCaseComponent, LoginComponent, SidenavComponent, SideNavCasesCaseViewComponent, SideNavTasksTaskViewComponent, EmptyViewComponent, SideNavTabviewallcaseContent0TaskViewComponent, SideNavTabviewallcaseContent1CaseViewComponent, SideNavTabviewallcaseContent2CaseViewComponent, TabViewAllCaseComponent]
+  entryComponents: [NewCaseComponent, LoginComponent, SidenavComponent, SideNavCasesCaseViewComponent,
+    SideNavTasksTaskViewComponent, EmptyViewComponent, SideNavTabviewallcaseContent0TaskViewComponent,
+    SideNavTabviewallcaseContent1CaseViewComponent, SideNavTabviewallcaseContent2CaseViewComponent, TabViewAllCaseComponent]
 })
 export class AppModule {
 }
