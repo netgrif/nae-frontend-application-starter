@@ -1,8 +1,17 @@
 # Netgrif Application Engine Backend Starter
 
-This project is starter for [Netgrif Application Engine](https://github.com/netgrif/components) 
+This is a frontend starter project for [Netgrif Application Engine](https://github.com/netgrif/components) to display your NAE based application, manage your processes, cases and tasks.
 
----
+It helps if you are familiar with Angular Framework, Typescript, CSS and HTML, but it is not necessary as this starter project already contains some predefined views and navigation items, which are suitable for interacting with your processes.
+
+
+
+# Requirements
+| Name | Version | Description | Recommendation |
+|------|---------|-------------|----------------|
+| [Angular](https://angular.io) | 10+ | TypeScript-based web application framework | [Angular 10](https://angular.io) |
+| [NodeJs](https://nodejs.org/en/) | 12+ | JavaScript runtime built on Chrome's V8 JavaScript engine | [NodeJs 10.22.11](https://nodejs.org/en/download/releases/) |
+| [NPM](https://www.npmjs.com) | 6+ | Node Package Manager | Compatible version comes with NodeJs |
 
 
 ### NAE.json
