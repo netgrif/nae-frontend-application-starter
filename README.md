@@ -29,16 +29,15 @@ The second step is to build the application using Angular CLI (Command Line Inte
 
 To run the application locally you can use ```ng serve``` command, that runs an embedded server and serves the application to localhost. Port of the application can be changed using ```--port``` option. The default port is 4200.
 
-### NAE.json
+## NAE.json
 
-To configure NAE application more easily the libraries use file nae.json that is placed in root of the project.
-nae.json defines global application configuration like urls to backend resources, services' configurations, routing and views.
+The frontend application consist of side menu and a views for the application. There are some predefined views for processes, cases, tasks and user management. Further views can be added using Angular schematics.
+
+To configure NAE application more easily the libraries use file ```nae.json``` that is placed in root of the project.
+```nae.json``` defines global application configuration like urls to backend resources, services' configurations, routing and views.
+
+For generating a view that is defined in ```nae.json``` you can use Angular Schematics. In terminal, use ```ng generate netgrif:components``` command to run NAE Components Schematic tool.
 
 You can find [minimal nae.json configuration here](docs/configuration/nae-minimal.json).
 
-You can read more on how to configure complete [nae.json here](https://components.netgrif.com/configuration).
-
-
 For easier startup clone [template project for NAE frontend application](https://github.com/netgrif/nae-frontend-starter)
-
-For more information please read instructions in [Get Started](https://components.netgrif.com/get_started)
