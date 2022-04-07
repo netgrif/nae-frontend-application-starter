@@ -7,26 +7,27 @@ It helps if you are familiar with Angular Framework, Typescript, CSS and HTML, b
 
 
 # Requirements
-Frontend application has some requirements for runtime environment. The following table is summary of requirements to run and use the engine.
+Frontend application has some requirements for runtime environment. The following table is summary of requirements to build, run and use the engine.
 
 | Name | Version | Description | Recommendation |
 |------|---------|-------------|----------------|
+| [Angular CLI](https://angular.io) | 10+ | TypeScript-based web application framework | [Angular 10](https://angular.io) |
 | [NodeJs](https://nodejs.org/en/) | 12+ | JavaScript runtime built on Chrome's V8 JavaScript engine | [NodeJs 10.22.11](https://nodejs.org/en/download/releases/) |
 | [NPM](https://www.npmjs.com) | 6+ | Node Package Manager | Compatible version comes with NodeJs |
 
-The above requirements are enough to run this starter project, but if you want to develop other views and component into frontend application, you will need Angular framework installed too:
-
-| Name | Version | Description | Recommendation |
-|------|---------|-------------|----------------|
-| [Angular](https://angular.io) | 10+ | TypeScript-based web application framework | [Angular 10](https://angular.io) |
 
 # Installation
 This project can be used as a base to your NAE application. Before you start coding please consider doing following steps to personalize project:
 
 - In package.json, change the value of ```name``` attribute to name of your application
 
-As it is an Angular project, it contains a file called ```package.json```
+As it is an Angular project, there is a file called ```package.json``` in root folder, which contains information about project and application, script definitions, dependencies and their versions. 
 
+First step is to install the dependencies using the NPM package manager. Using terminal, navigate to the  root folder (where the ```package.json``` is saved) and run ```npm install``` command. This will scan the ```package.json``` file and install the dependencies from NPM repositories.
+
+The second step is to build the application using Angular CLI (Command Line Interface). This can be done using terminal when you are in the root folder of the project running ```ng build``` command. This will create a ```dist``` folder, that contains the build of application. This build then can be moved to a web server (e.g. Apache or Nginx).
+
+To run the application locally you can use ```ng serve``` command, that runs an embedded server and serves the application to localhost. Port of the application can be changed using ```--port``` option. The default port is 4200.
 
 ### NAE.json
 
