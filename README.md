@@ -36,7 +36,7 @@ The frontend application consist of side menu and a views for the application. T
 To configure NAE application more easily the libraries use file ```nae.json``` that is placed in root of the project.
 ```nae.json``` defines global application configuration like urls to backend resources, services' configurations, routing and views.
 
-For generating a view that is defined in ```nae.json``` you can use Angular Schematics. In terminal, use ```ng generate netgrif:components``` command to run NAE Components Schematic tool.
+<!--- For generating a view that is defined in ```nae.json``` you can use Angular Schematics. In terminal, use ```ng generate netgrif:components``` command to run NAE Components Schematic tool. --->
 
 You can find [minimal nae.json configuration here](docs/configuration/nae-minimal.json).
 
