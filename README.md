@@ -1,4 +1,4 @@
-# Netgrif Application Engine Backend Starter
+# Netgrif Application Engine Frontend Starter
 
 This is a frontend starter project for [Netgrif Application Engine](https://github.com/netgrif/components) to display your NAE based application, manage your processes, cases and tasks.
 
