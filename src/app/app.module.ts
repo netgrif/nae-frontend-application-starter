@@ -25,6 +25,10 @@ import {
   SideMenuComponentModule,
   TabsComponentModule,
   ToolbarComponentModule,
+  WorkflowViewComponent,
+  RoleAssignmentComponent,
+  ImportNetComponent,
+  SideMenuNewCaseComponentModule,
 } from '@netgrif/components';
 import {TemplateFrontendConfigurationService} from './template-frontend-configuration.service';
 import {TemplateFrontendViewService} from './template-frontend-view.service';
@@ -77,7 +81,8 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
     CaseViewComponentModule,
     SearchComponentModule,
     QuickPanelComponentModule,
-    TabsComponentModule
+    TabsComponentModule,
+    SideMenuNewCaseComponentModule
   ],
   providers: [
     {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService},
@@ -86,7 +91,8 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
   bootstrap: [AppComponent],
   entryComponents: [NewCaseComponent, LoginComponent, SidenavComponent, SideNavCasesCaseViewComponent,
     SideNavTasksTaskViewComponent, EmptyViewComponent, SideNavTabviewallcaseContent0TaskViewComponent,
-    SideNavTabviewallcaseContent1CaseViewComponent, SideNavTabviewallcaseContent2CaseViewComponent, TabViewAllCaseComponent]
+    SideNavTabviewallcaseContent1CaseViewComponent, SideNavTabviewallcaseContent2CaseViewComponent,
+    TabViewAllCaseComponent, WorkflowViewComponent, ImportNetComponent, RoleAssignmentComponent]
 })
 export class AppModule {
 }
