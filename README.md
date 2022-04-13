@@ -12,7 +12,7 @@ Frontend application has some requirements for runtime environment. The followin
 | Name | Version | Description | Recommendation |
 |------|---------|-------------|----------------|
 | [Angular CLI](https://angular.io) | 10+ | TypeScript-based web application framework | [Angular 10](https://angular.io) |
-| [NodeJs](https://nodejs.org/en/) | 12+ | JavaScript runtime built on Chrome's V8 JavaScript engine | [NodeJs 10.22.11](https://nodejs.org/en/download/releases/) |
+| [NodeJs](https://nodejs.org/en/) | 12+ | JavaScript runtime built on Chrome's V8 JavaScript engine | [NodeJs 12.22.12](https://nodejs.org/en/download/releases/) |
 | [NPM](https://www.npmjs.com) | 6+ | Node Package Manager | Compatible version comes with NodeJs |
 
 
