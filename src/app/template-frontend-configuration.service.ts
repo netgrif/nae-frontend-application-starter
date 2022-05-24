@@ -4,10 +4,10 @@ import {NetgrifApplicationEngine} from '@netgrif/components-core/';
 import {default as naeConfig} from '../../nae.json';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class TemplateFrontendConfigurationService extends ConfigurationService {
-  constructor() {
-    super(naeConfig as unknown as NetgrifApplicationEngine);
-  }
+    constructor() {
+        super(naeConfig as unknown as NetgrifApplicationEngine);
+    }
 }

@@ -9,36 +9,36 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TemplateFrontendConfigurationService} from '../../template-frontend-configuration.service';
 
 describe('SidenavComponent', () => {
-  let component: SidenavComponent;
-  let fixture: ComponentFixture<SidenavComponent>;
+    let component: SidenavComponent;
+    let fixture: ComponentFixture<SidenavComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        MaterialModule,
-        ToolbarComponentModule,
-        NavigationComponentModule,
-        HttpClientTestingModule,
-        BrowserAnimationsModule,
-        RouterTestingModule.withRoutes([])
-      ],
-      providers: [
-        AuthenticationMethodService,
-        {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService}
-      ],
-      declarations: [SidenavComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-      .compileComponents();
-  }));
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            imports: [
+                MaterialModule,
+                ToolbarComponentModule,
+                NavigationComponentModule,
+                HttpClientTestingModule,
+                BrowserAnimationsModule,
+                RouterTestingModule.withRoutes([])
+            ],
+            providers: [
+                AuthenticationMethodService,
+                {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService}
+            ],
+            declarations: [SidenavComponent],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        })
+            .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(SidenavComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(SidenavComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

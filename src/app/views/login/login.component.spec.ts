@@ -7,32 +7,32 @@ import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+    let component: LoginComponent;
+    let fixture: ComponentFixture<LoginComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        LoginFormComponentModule,
-        HttpClientTestingModule,
-        BrowserAnimationsModule
-      ],
-      providers: [
-        AuthenticationMethodService,
-        {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService},
-      ],
-      declarations: [LoginComponent]
-    })
-      .compileComponents();
-  }));
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            imports: [
+                LoginFormComponentModule,
+                HttpClientTestingModule,
+                BrowserAnimationsModule
+            ],
+            providers: [
+                AuthenticationMethodService,
+                {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService},
+            ],
+            declarations: [LoginComponent]
+        })
+            .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(LoginComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

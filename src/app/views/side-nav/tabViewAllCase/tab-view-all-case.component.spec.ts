@@ -4,24 +4,24 @@ import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {AppModule} from '../../../app.module';
 
 describe('TabViewAllCaseComponent', () => {
-  let component: TabViewAllCaseComponent;
-  let fixture: ComponentFixture<TabViewAllCaseComponent>;
+    let component: TabViewAllCaseComponent;
+    let fixture: ComponentFixture<TabViewAllCaseComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [AppModule],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
-    })
-      .compileComponents();
-  }));
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            imports: [AppModule],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        })
+            .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TabViewAllCaseComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(TabViewAllCaseComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

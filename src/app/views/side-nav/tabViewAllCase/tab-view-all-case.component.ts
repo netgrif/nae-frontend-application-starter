@@ -6,46 +6,46 @@ import {SideNavTabviewallcaseContent2CaseViewComponent} from './content/2/side-n
 
 
 @Component({
-  selector: 'app-tab-view-all-case',
-  templateUrl: './tab-view-all-case.component.html',
-  styleUrls: ['./tab-view-all-case.component.scss'],
-  providers: [
-    {
-      provide: NAE_VIEW_ID_SEGMENT,
-      useValue: 'tabViewAllCase'
-    },
-    ViewIdService,
-  ]
+    selector: 'app-tab-view-all-case',
+    templateUrl: './tab-view-all-case.component.html',
+    styleUrls: ['./tab-view-all-case.component.scss'],
+    providers: [
+        {
+            provide: NAE_VIEW_ID_SEGMENT,
+            useValue: 'tabViewAllCase'
+        },
+        ViewIdService,
+    ]
 })
 export class TabViewAllCaseComponent {
 
-  tabs = [
-    {
-      label: {
-        icon: 'storage',
-        text: 'All Cases',
-      },
-      canBeClosed: false,
-      tabContentComponent: SideNavTabviewallcaseContent1CaseViewComponent,
-      order: -2,
-      injectedObject: {
-        tabViewComponent: SideNavTabviewallcaseContent0TaskViewComponent,
-        tabViewOrder: 0
-      }
-    },
-    {
-      label: {
-        icon: 'face',
-        text: 'My Cases',
-      },
-      canBeClosed: false,
-      tabContentComponent: SideNavTabviewallcaseContent2CaseViewComponent,
-      order: -1,
-      injectedObject: {
-        tabViewComponent: SideNavTabviewallcaseContent0TaskViewComponent,
-        tabViewOrder: 0
-      }
-    },
-  ];
+    tabs = [
+        {
+            label: {
+                icon: 'storage',
+                text: 'All Cases',
+            },
+            canBeClosed: false,
+            tabContentComponent: SideNavTabviewallcaseContent1CaseViewComponent,
+            order: -2,
+            injectedObject: {
+                tabViewComponent: SideNavTabviewallcaseContent0TaskViewComponent,
+                tabViewOrder: 0
+            }
+        },
+        {
+            label: {
+                icon: 'face',
+                text: 'My Cases',
+            },
+            canBeClosed: false,
+            tabContentComponent: SideNavTabviewallcaseContent2CaseViewComponent,
+            order: -1,
+            injectedObject: {
+                tabViewComponent: SideNavTabviewallcaseContent0TaskViewComponent,
+                tabViewOrder: 0
+            }
+        },
+    ];
 
 }
