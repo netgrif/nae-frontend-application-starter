@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, Inject, ViewChild} from '@angular/core';
 import {
+    AbstractTabbedCaseViewComponent,
     AllowedNetsService,
     AllowedNetsServiceFactory,
     CaseViewService,
@@ -12,7 +13,6 @@ import {
     NAE_TAB_DATA,
     SearchService,
     SimpleFilter,
-    TabbedCaseView,
     UserService,
     ViewIdService,
 } from '@netgrif/components-core';
@@ -51,7 +51,7 @@ const baseFilterFactory = (userService: UserService) => {
         {provide: NAE_SEARCH_CATEGORIES, useFactory: defaultCaseSearchCategoriesFactory, deps: [CategoryFactory]},
     ]
 })
-export class SideNavTabviewallcaseContent2CaseViewComponent extends TabbedCaseView implements AfterViewInit {
+export class SideNavTabviewallcaseContent2CaseViewComponent extends AbstractTabbedCaseViewComponent implements AfterViewInit {
 
     @ViewChild('header') public caseHeaderComponent: HeaderComponent;
 
