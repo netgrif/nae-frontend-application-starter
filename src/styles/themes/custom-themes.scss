@@ -1,24 +1,75 @@
-@import '~@angular/material/theming';
-@import 'custom-light-theme.scss';
-@import '~@covalent/core/theming/all-theme';
-@import '~@covalent/markdown/markdown-theme';
+@use '@angular/material' as mat;
+@import 'node_modules/@netgrif/components/nae-theme';
 
-@import '~@netgrif/components/nae-theme';
-
-$typography: mat-typography-config(
+$typography: mat.define-typography-config(
     $font-family: 'Roboto, monospace',
-    $headline: mat-typography-level(32px, 48px, 700)
+    $headline: mat.define-typography-level(32px, 48px, 700)
 );
 
-@include mat-core($typography);
+@include mat.core($typography);
 
-$custom-light-theme: mat-light-theme(
-        mat-palette($bv-light-primary),
-        mat-palette($bv-light-secondary),
-        mat-palette($bv-light-warn)
+$netgrif-blue: (
+    50: #e2eaf0,
+    100: #b7c9d9,
+    200: #87a6c0,
+    300: #5782a7,
+    400: #336794,
+    500: #0f4c81,
+    600: #0d4579,
+    700: #0b3c6e,
+    800: #083364,
+    900: #042451,
+    A100: #ffd180,
+    A200: #ffab40,
+    A400: #ff9100,
+    A700: #ff6d00,
+    contrast: (
+        50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: rgba(black, 0.87),
+        400: rgba(black, 0.87),
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+        A100: rgba(black, 0.87),
+        A200: rgba(black, 0.87),
+        A400: rgba(black, 0.87),
+        A700: rgba(black, 0.87),
+    )
 );
-@include angular-material-theme($custom-light-theme);
-@include nae-lib-theme($custom-light-theme, $typography);
+
+$netgrif-primary: mat.define-palette($netgrif-blue);
+$netgrif-accent:  mat.define-palette($netgrif-blue, A200, A100, A400);
+$netgrif-warn:    mat.define-palette(mat.$red-palette);
+
+$netgrif-theme: mat.define-light-theme($netgrif-primary, $netgrif-accent, $netgrif-warn);
+
+@include mat.all-component-themes($netgrif-theme);
+//@include covalent-theme($theme, $typography);
+
+@include nae-lib-theme($netgrif-theme, $typography);
+
+body {
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        background-color: white;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: #82A5DD;
+    }
+}
 
 
 

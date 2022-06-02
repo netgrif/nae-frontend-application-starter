@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, Inject, ViewChild} from '@angular/core';
 import {
+    AbstractTabbedTaskViewComponent,
     AllowedNetsService,
     AllowedNetsServiceFactory,
     CategoryFactory,
@@ -12,7 +13,6 @@ import {
     NAE_TASK_VIEW_CONFIGURATION,
     SearchService,
     tabbedAllowedNetsServiceFactory,
-    TabbedTaskView,
     tabbedTaskViewConfigurationFactory,
     TaskViewService,
     ViewIdService
@@ -53,7 +53,7 @@ const baseFilterFactory = (injectedTabData: InjectedTabbedTaskViewData) => {
         {provide: NAE_SEARCH_CATEGORIES, useFactory: defaultTaskSearchCategoriesFactory, deps: [CategoryFactory]},
     ]
 })
-export class SideNavTabviewallcaseContent0TaskViewComponent extends TabbedTaskView implements AfterViewInit {
+export class SideNavTabviewallcaseContent0TaskViewComponent extends AbstractTabbedTaskViewComponent implements AfterViewInit {
 
     @ViewChild('header') public taskHeaderComponent: HeaderComponent;
 
