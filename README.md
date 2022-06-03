@@ -14,9 +14,9 @@ build, run and use the engine.
 
 | Name | Version | Description | Recommendation |
 |------|---------|-------------|----------------|
-| [Angular CLI](https://angular.io) | 10.+ | TypeScript-based web application framework | ```npm i -g @angular/cli@10.2.4``` |
-| [NodeJs](https://nodejs.org/en/) | 12.+ | JavaScript runtime built on Chrome's V8 JavaScript engine | [NodeJs 12.22.12](https://nodejs.org/download/release/v12.22.12/) |
-| [NPM](https://www.npmjs.com) | 6.+ | Node Package Manager | Compatible version comes with NodeJs |
+| [Angular CLI](https://angular.io) | 13.+ | TypeScript-based web application framework | ```npm i -g @angular/cli@13.3.1"``` |
+| [NodeJs](https://nodejs.org/en/) | 12.20+ OR 14.15+ OR 16.10.+ | JavaScript runtime built on Chrome's V8 JavaScript engine | [NodeJs 14.19.3](https://nodejs.org/download/release/v14.19.3/) |
+| [NPM](https://www.npmjs.com) | 6.5.+ OR 7.4.+ | Node Package Manager | Compatible version comes with NodeJs |
 
 # Installation
 
