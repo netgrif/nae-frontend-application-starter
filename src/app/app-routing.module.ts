@@ -10,6 +10,5 @@ const routes: Routes = [];
     providers: [ResourceProvider],
     exports: [RouterModule]
 })
-
 export class AppRoutingModule {
 }
