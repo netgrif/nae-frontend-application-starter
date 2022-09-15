@@ -2,12 +2,19 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {AuthenticationModule, ConfigurationService, MaterialModule, TranslateLibModule, ViewService,} from '@netgrif/components-core';
+import {
+    AuthenticationModule,
+    ConfigurationService,
+    MaterialModule,
+    TranslateLibModule,
+    ViewService,
+} from '@netgrif/components-core';
 import {FlexLayoutModule, FlexModule} from '@angular/flex-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
     AuthenticationComponentModule,
-    CaseViewComponentModule, DashboardComponentModule,
+    CaseViewComponentModule,
+    DashboardComponentModule,
     HeaderComponentModule,
     ImportNetComponent,
     LoginFormComponentModule,
@@ -17,10 +24,12 @@ import {
     QuickPanelComponentModule,
     RoleAssignmentComponent,
     SearchComponentModule,
-    SideMenuComponentModule, SideMenuContentComponentModule,
+    SideMenuComponentModule,
+    SideMenuContentComponentModule,
     SideMenuNewCaseComponentModule,
     TabsComponentModule,
-    ToolbarComponentModule, UserComponentModule,
+    ToolbarComponentModule,
+    UserComponentModule,
     WorkflowViewComponent,
 } from '@netgrif/components';
 import {TemplateFrontendConfigurationService} from './template-frontend-configuration.service';

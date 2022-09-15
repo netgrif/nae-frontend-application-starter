@@ -29,7 +29,7 @@ As it is an Angular project, there is a file called ```package.json``` in root f
 project and application, script definitions, dependencies and their versions.
 
 First step is to install the dependencies using the NPM package manager. Using terminal, navigate to the root folder (
-where the ```package.json``` is saved) and run ```npm install``` command. This will scan the ```package.json``` file and
+where the ```package.json``` is saved) and run ```npm install --legacy-peer-deps``` command. This will scan the ```package.json``` file and
 install the dependencies from NPM repositories.
 
 The second step is to build the application using Angular CLI (Command Line Interface). This can be done using terminal
