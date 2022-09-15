@@ -1,6 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {NAE_VIEW_ID_SEGMENT, SnackBarService, User, UserService, ViewIdService} from '@netgrif/components-core';
+import {
+    LoggerService,
+    NAE_VIEW_ID_SEGMENT,
+    SnackBarService,
+    User,
+    UserService,
+    ViewIdService
+} from '@netgrif/components-core';
 import {Router} from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-login',
@@ -16,30 +24,32 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-    constructor(private userService: UserService,
-                private router: Router,
-                private snackbar: SnackBarService) {
-    }
-
-    ngOnInit(): void {
-        if (this.userService.user.id.length !== 0) {
-            this.redirectToCases();
+     constructor(private router: Router,
+                private _userService: UserService,
+                private _snackbar: SnackBarService,
+                private _translate: TranslateService,
+                private _log: LoggerService) {
         }
-    }
 
-    onLogin(user: User) {
-        console.log(user);
-        if (user && user.id) {
-            this.redirectToCases();
-        } else {
-            this.snackbar.openErrorSnackBar('Wrong credentials!');
+      ngOnInit(): void {
+            if (this._userService.user.id.length !== 0) {
+                this.redirectToHome();
+            }
         }
+
+     onLogin(user: User) {
+            if (user && user.id) {
+                this.redirectToHome();
+            } else {
+                this._snackbar.openErrorSnackBar(this._translate.instant('forms.login.wrongCredentials'));
+            }
     }
 
-    private redirectToCases() {
-        this.router.navigate(['cases']).then((value) => {
-            console.log('Routed to ' + value);
-        });
-    }
+     private redirectToHome() {
+         this.router.navigate(['/cases']).then((value) => {
+              this._log.debug('Routed to ' + value);
+          });
+        }
+
 
 }

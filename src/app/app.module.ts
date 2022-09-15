@@ -3,12 +3,19 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {AuthenticationModule, ConfigurationService, MaterialModule, TranslateLibModule, ViewService,} from '@netgrif/components-core';
+import {
+    AuthenticationModule,
+    ConfigurationService,
+    MaterialModule,
+    TranslateLibModule,
+    ViewService,
+} from '@netgrif/components-core';
 import {FlexLayoutModule, FlexModule} from '@angular/flex-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
     AuthenticationComponentModule,
     CaseViewComponentModule,
+    DashboardComponentModule,
     HeaderComponentModule,
     ImportNetComponent,
     LoginFormComponentModule,
@@ -19,9 +26,11 @@ import {
     RoleAssignmentComponent,
     SearchComponentModule,
     SideMenuComponentModule,
+    SideMenuContentComponentModule,
     SideMenuNewCaseComponentModule,
     TabsComponentModule,
     ToolbarComponentModule,
+    UserComponentModule,
     WorkflowViewComponent,
 } from '@netgrif/components';
 import {TemplateFrontendConfigurationService} from './template-frontend-configuration.service';
@@ -41,7 +50,9 @@ import {
     SideNavTabviewallcaseContent2CaseViewComponent
 } from './views/side-nav/tabViewAllCase/content/2/side-nav-tabviewallcase-content2-case-view.component';
 import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-all-case.component';
-
+import {ResizableModule} from 'angular-resizable-element';
+import {PieChartModule} from '@swimlane/ngx-charts';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -76,7 +87,14 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
         SearchComponentModule,
         QuickPanelComponentModule,
         TabsComponentModule,
-        SideMenuNewCaseComponentModule
+        SideMenuNewCaseComponentModule,
+        DashboardComponentModule,
+        ResizableModule,
+        UserComponentModule,
+        PieChartModule,
+        CommonModule,
+        MaterialModule,
+        SideMenuContentComponentModule
     ],
     providers: [
         {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService},

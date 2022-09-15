@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
+        "start": "ng serve --configuration development",
         "build": "ng build --configuration production",
         "test": "ng test",
         "lint": "ng lint",
@@ -11,8 +11,8 @@
     },
     "private": true,
     "dependencies": {
-        "@netgrif/components": "6.1.1",
-        "@netgrif/components-core": "6.1.1",
+        "@netgrif/components": "6.2.1",
+        "@netgrif/components-core": "6.2.1",
         "@angular-material-components/datetime-picker": "~7.0.1",
         "@angular-material-components/moment-adapter": "~7.0.0",
         "@angular/animations": "~13.3.1",
