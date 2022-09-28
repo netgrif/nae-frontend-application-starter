@@ -1,6 +1,7 @@
 {
     "$schema": "node_modules/@netgrif/components-core/src/schema/nae-schema.json",
     "extends": "nae-default",
+    "autoResolveBackendUrl": false,
     "providers": {
         "auth": {
             "address": "http://localhost:8080/api",
