@@ -16,14 +16,14 @@ export class TemplateFrontendConfigurationService extends ConfigurationService {
     }
 
     private autoResolveBackendUrl() {
-        const naeConfig = this.get();
-        naeConfig.providers.auth.address = location.origin + '/api';
-        if (Array.isArray(naeConfig.providers.resources)) {
-            naeConfig.providers.resources.forEach(resource => {
+        const config = this.get();
+        config.providers.auth.address = location.origin + '/api';
+        if (Array.isArray(config.providers.resources)) {
+            config.providers.resources.forEach(resource => {
                 resource.address = location.origin + '/api';
             });
         }
-        this.configuration = naeConfig;
+        this.configuration = config;
     }
 
 }
