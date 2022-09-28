@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {
@@ -53,6 +52,7 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
 import {ResizableModule} from 'angular-resizable-element';
 import {PieChartModule} from '@swimlane/ngx-charts';
 import {CommonModule} from '@angular/common';
+
 
 @NgModule({
     declarations: [
