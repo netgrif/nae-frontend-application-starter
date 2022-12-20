@@ -11,8 +11,8 @@
     },
     "private": true,
     "dependencies": {
-        "@netgrif/components": "6.2.6",
-        "@netgrif/components-core": "6.2.6",
+        "@netgrif/components": "6.2.7",
+        "@netgrif/components-core": "6.2.7",
         "@angular-material-components/datetime-picker": "~7.0.1",
         "@angular-material-components/moment-adapter": "~7.0.0",
         "@angular/animations": "~13.3.1",
