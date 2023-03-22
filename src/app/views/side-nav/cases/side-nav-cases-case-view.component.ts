@@ -17,7 +17,7 @@ import {
 import {HeaderComponent} from '@netgrif/components';
 
 const localAllowedNetsFactory = (factory: AllowedNetsServiceFactory) => {
-    return factory.createFromConfig('side-nav/cases');
+    return factory.createWithAllNets();
 };
 
 const baseFilterFactory = () => {
