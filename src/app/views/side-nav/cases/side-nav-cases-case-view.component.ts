@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, Optional, ViewChild} from '@angular/core';
 import {
     AbstractCaseViewComponent,
     AllowedNetsService,
@@ -10,6 +10,7 @@ import {
     NAE_BASE_FILTER,
     NAE_SEARCH_CATEGORIES,
     NAE_VIEW_ID_SEGMENT,
+    OverflowService,
     SearchService,
     SimpleFilter,
     ViewIdService,
@@ -34,6 +35,7 @@ const baseFilterFactory = () => {
         CategoryFactory,
         CaseViewService,
         SearchService,
+        OverflowService,
         {
             provide: NAE_BASE_FILTER,
             useFactory: baseFilterFactory
@@ -55,14 +57,16 @@ export class SideNavCasesCaseViewComponent extends AbstractCaseViewComponent imp
 
     @ViewChild('header') public caseHeaderComponent: HeaderComponent;
 
-    constructor(caseViewService: CaseViewService) {
-        super(caseViewService, undefined, undefined
-            //  ,
-            // {
-            // enableCaseTitle: ,
-            // isCaseTitleRequired:
-            // }
-        );
+    constructor(caseViewService: CaseViewService, @Optional() overflowService: OverflowService) {
+        super(caseViewService, overflowService, undefined, {
+            enableCaseTitle: true,
+            isCaseTitleRequired: false,
+            newCaseButtonConfig: {
+                createCaseButtonTitle: 'New Case',
+                createCaseButtonIcon: 'add_circle'
+            }
+        });
+
     }
 
     ngAfterViewInit(): void {

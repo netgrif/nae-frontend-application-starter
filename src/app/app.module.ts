@@ -5,7 +5,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {
     AuthenticationModule,
     ConfigurationService,
+    DialogModule,
     MaterialModule,
+    NAE_ASYNC_RENDERING_CONFIGURATION,
     TranslateLibModule,
     ViewService,
 } from '@netgrif/components-core';
@@ -15,6 +17,7 @@ import {
     AuthenticationComponentModule,
     CaseViewComponentModule,
     DashboardComponentModule,
+    DialogComponentsModule,
     HeaderComponentModule,
     ImportNetComponent,
     LoginFormComponentModule,
@@ -52,6 +55,7 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
 import {ResizableModule} from 'angular-resizable-element';
 import {PieChartModule} from '@swimlane/ngx-charts';
 import {CommonModule} from '@angular/common';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -94,12 +98,22 @@ import {CommonModule} from '@angular/common';
         PieChartModule,
         CommonModule,
         MaterialModule,
+        DialogModule,
+        DialogComponentsModule,
         SideMenuContentComponentModule
     ],
     providers: [
         {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService},
-        {provide: ViewService, useClass: TemplateFrontendViewService}
-    ],
+        {provide: ViewService, useClass: TemplateFrontendViewService},
+        {
+            provide: NAE_ASYNC_RENDERING_CONFIGURATION, useValue: {
+                batchSize: 20,
+                batchDelay: 50,
+                numberOfPlaceholders: 4,
+                enableAsyncRenderingForNewFields: true,
+                enableAsyncRenderingOnTaskExpand: true
+            }
+        },],
     bootstrap: [AppComponent],
     entryComponents: [NewCaseComponent, LoginComponent, SidenavComponent, SideNavCasesCaseViewComponent,
         SideNavTasksTaskViewComponent, EmptyViewComponent, SideNavTabviewallcaseContent0TaskViewComponent,
