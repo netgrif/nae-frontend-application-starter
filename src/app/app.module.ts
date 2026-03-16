@@ -11,7 +11,7 @@ import {
     TranslateLibModule,
     ViewService,
 } from '@netgrif/components-core';
-import {FlexLayoutModule, FlexModule} from '@angular/flex-layout';
+import {FlexLayoutModule, FlexModule} from "@ngbracket/ngx-layout";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
     AuthenticationComponentModule,
@@ -115,10 +115,10 @@ import {MatDialogModule} from "@angular/material/dialog";
             }
         },],
     bootstrap: [AppComponent],
-    entryComponents: [NewCaseComponent, LoginComponent, SidenavComponent, SideNavCasesCaseViewComponent,
+    /*entryComponents: [NewCaseComponent, LoginComponent, SidenavComponent, SideNavCasesCaseViewComponent,
         SideNavTasksTaskViewComponent, EmptyViewComponent, SideNavTabviewallcaseContent0TaskViewComponent,
         SideNavTabviewallcaseContent1CaseViewComponent, SideNavTabviewallcaseContent2CaseViewComponent,
-        TabViewAllCaseComponent, WorkflowViewComponent, ImportNetComponent, RoleAssignmentComponent]
+        TabViewAllCaseComponent, WorkflowViewComponent, ImportNetComponent, RoleAssignmentComponent]*/
 })
 export class AppModule {
 }

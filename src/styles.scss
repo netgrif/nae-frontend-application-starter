@@ -1,7 +1,9 @@
-@import '~@angular/material/theming';
+@use '@angular/material' as mat;
+@use './styles/themes/custom-themes' as customTheme;
 
-@include mat-core();
-@import './styles/themes/custom-themes.scss';
+@include mat.core();
+@include customTheme.app-theme();
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body {

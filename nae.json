@@ -4,35 +4,51 @@
     "autoResolveBackendUrl": false,
     "providers": {
         "auth": {
-            "address": "http://localhost:8080/api",
-            "authentication": "Basic",
+            "address": "http://localhost:8800/api/",
+            "authentication": "BasicWithRealm",
             "endpoints": {
-                "login": "/auth/login",
-                "logout": "/auth/logout",
-                "signup": "/auth/signup"
+                "login": "auth/login",
+                "logout": "auth/logout",
+                "signup": "auth/signup",
+                "changePassword": "auth/changePassword",
+                "verification": "auth/verify",
+                "verify": "auth/token/verify",
+                "invite": "auth/invite",
+                "reset": "auth/reset",
+                "recover": "auth/recover"
             },
-            "sessionBearer": "X-Auth-Token"
+            "sessionBearer": "X-Auth-Token",
+            "sessionTimeoutEnabled": false,
+            "sessionTimeout": 900,
+            "jwtBearer": "X-Jwt-Token",
+            "sso": {
+                "enable": false,
+                "clientId": "dev-cluster-worker",
+                "redirectUrl": "http://localhost:8081/realms/netgrif-cloud-testing/protocol/openid-connect/auth",
+                "refreshUrl": "http://localhost:8800/api/auth/login",
+                "scopes": ["openid","email","profile","roles"]
+            }
         },
         "resources": [
             {
                 "name": "main",
-                "address": "http://localhost:8080/api"
+                "address": "http://localhost:8800/api/"
             },
             {
                 "name": "case",
-                "address": "http://localhost:8080/api"
+                "address": "http://localhost:8800/api/"
             },
             {
                 "name": "task",
-                "address": "http://localhost:8080/api"
+                "address": "http://localhost:8800/api/"
             },
             {
                 "name": "petrinet",
-                "address": "http://localhost:8080/api"
+                "address": "http://localhost:8800/api/"
             },
             {
                 "name": "user",
-                "address": "http://localhost:8080/api"
+                "address": "http://localhost:8800/api/"
             }
         ]
     },
@@ -195,9 +211,106 @@
         "name": "default",
         "pallets": {
             "light": {
-                "primary": "#2196F3",
-                "secondary": "#FFC107",
-                "warn": "red"
+                "primary": {
+                    "50": "",
+                    "100": "",
+                    "200": "",
+                    "300": "",
+                    "400": "",
+                    "500": "",
+                    "600": "",
+                    "700": "",
+                    "800": "",
+                    "900": "",
+                    "A100": "",
+                    "A200": "",
+                    "A400": "",
+                    "A700": "",
+                    "contrast": {
+                        "light": [
+                            "300",
+                            "400",
+                            "500",
+                            "600",
+                            "700",
+                            "800",
+                            "900"
+                        ],
+                        "dark": [
+                            "50",
+                            "100",
+                            "200"
+                        ]
+                    }
+                },
+                "secondary": {
+                    "50": "",
+                    "100": "",
+                    "200": "",
+                    "300": "",
+                    "400": "",
+                    "500": "",
+                    "600": "",
+                    "700": "",
+                    "800": "",
+                    "900": "",
+                    "A100": "",
+                    "A200": "",
+                    "A400": "",
+                    "A700": "",
+                    "contrast": {
+                        "light": [
+                            "300",
+                            "400",
+                            "500",
+                            "600",
+                            "700",
+                            "800",
+                            "900"
+                        ],
+                        "dark": [
+                            "50",
+                            "100",
+                            "200"
+                        ]
+                    }
+                },
+                "warn": {
+                    "50": "",
+                    "100": "",
+                    "200": "",
+                    "300": "",
+                    "400": "",
+                    "500": "",
+                    "600": "",
+                    "700": "",
+                    "800": "",
+                    "900": "",
+                    "A100": "",
+                    "A200": "",
+                    "A400": "",
+                    "A700": "",
+                    "contrast": {
+                        "light": [
+                            "300",
+                            "400",
+                            "500",
+                            "600",
+                            "700",
+                            "800",
+                            "900"
+                        ],
+                        "dark": [
+                            "50",
+                            "100",
+                            "200"
+                        ]
+                    }
+                }
+            },
+            "dark": {
+                "primary": "blue",
+                "secondary": "pink"
             }
         }
     },
@@ -208,19 +321,36 @@
         "all-cases": {
             "title": "All Cases",
             "access": "public",
-            "query": {},
+            "body": {},
+            "type": "Case"
+        },
+        "all-tasks": {
+            "title": "All Tasks",
+            "access": "public",
+            "body": {},
+            "type": "Task"
+        },
+        "data-cases": {
+            "title": "Data Cases",
+            "access": "public",
+            "body": {
+                "petriNet": {
+                    "identifier": "data"
+                }
+            },
             "type": "Case"
         }
     },
     "i18n": [
-        "sk-SK",
-        "de-DE",
-        "en-US"
+        "sk",
+        "de",
+        "en"
     ],
     "services": {
         "auth": {
-            "logoutRedirect": "login",
-            "loginRedirect": "login"
+            "toLoginRedirect": "login",
+            "onLoginRedirect": "tabbed-views",
+            "onLogoutRedirect": "login"
         },
         "log": {
             "level": "DEBUG",
@@ -230,6 +360,24 @@
             "publishers": [
                 "console"
             ]
+        },
+        "routing": {
+            "defaultRedirect": "authentication",
+            "wildcardRedirect": "authentication"
+        },
+        "dataFields": {
+            "template": "material",
+            "appearance": "outline"
+        },
+        "legal": {
+            "termsOfService": "https://netgrif.com/",
+            "privacyPolicy": "https://netgrif.com/"
+        },
+        "groupNavigation": {
+            "groupNavigationRoute": "group-nav"
+        },
+        "doubleDrawer": {
+            "url": "drawer-double"
         }
     }
 }

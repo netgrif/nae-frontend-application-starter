@@ -62,7 +62,9 @@ export class SideNavCasesCaseViewComponent extends AbstractCaseViewComponent imp
             enableCaseTitle: true,
             isCaseTitleRequired: false,
             newCaseButtonConfig: {
-                createCaseButtonTitle: 'New Case',
+                createCaseButtonTitle: {
+                    defaultValue: 'New Case'
+                },
                 createCaseButtonIcon: 'add_circle'
             }
         });

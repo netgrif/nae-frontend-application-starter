@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
 
      private redirectToHome() {
          this.router.navigate(['/cases']).then((value) => {
-              this._log.debug('Routed to ' + value);
+             this._log.debug('Routed to ' + value);
           });
         }
 
