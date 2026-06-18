@@ -1,18 +1,22 @@
 import {AfterViewInit, Component, Inject, Optional, ViewChild} from '@angular/core';
 import {
+    AbstractTabbedCaseViewComponent,
+    AllowedNetsService,
+    AllowedNetsServiceFactory,
     Case,
     CaseViewService,
     CategoryFactory,
     defaultCaseSearchCategoriesFactory,
     InjectedTabbedCaseViewData,
     LoggerService,
+    NAE_BASE_FILTER,
+    NAE_DEFAULT_HEADERS,
     NAE_SEARCH_CATEGORIES,
     NAE_TAB_DATA,
+    OverflowService,
     SearchService,
     SimpleFilter,
-    AbstractTabbedCaseViewComponent,
-    ViewIdService,
-    NAE_BASE_FILTER, AllowedNetsServiceFactory, AllowedNetsService,  OverflowService
+    ViewIdService
 } from '@netgrif/components-core';
 import {HeaderComponent} from '@netgrif/components';
 
@@ -34,13 +38,18 @@ const localAllowedNetsFactory = (factory: AllowedNetsServiceFactory) => {
         SearchService,
         OverflowService,
         ViewIdService,
-        {   provide: NAE_BASE_FILTER,
+        {
+            provide: NAE_BASE_FILTER,
             useFactory: baseFilterFactory,
-            deps: [NAE_TAB_DATA]},
-        {   provide: AllowedNetsService,
+            deps: [NAE_TAB_DATA]
+        },
+        {
+            provide: AllowedNetsService,
             useFactory: localAllowedNetsFactory,
-            deps: [AllowedNetsServiceFactory]},
-        {provide: NAE_SEARCH_CATEGORIES, useFactory: defaultCaseSearchCategoriesFactory, deps: [CategoryFactory]}
+            deps: [AllowedNetsServiceFactory]
+        },
+        {provide: NAE_SEARCH_CATEGORIES, useFactory: defaultCaseSearchCategoriesFactory, deps: [CategoryFactory]},
+        {provide: NAE_DEFAULT_HEADERS, useValue: ['process-title', 'process-id', 'process-version', 'process-state']}
     ]
 })
 export class BuilderTabbedCaseViewComponent extends AbstractTabbedCaseViewComponent implements AfterViewInit {
