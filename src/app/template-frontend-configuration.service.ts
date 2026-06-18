@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ConfigurationService} from '@netgrif/components-core';
-import {NetgrifApplicationEngine} from '@netgrif/components-core/';
+import {NetgrifApplicationEngine} from '@netgrif/components-core';
 import {default as naeConfig} from '../../nae.json';
 
 @Injectable({

@@ -8,7 +8,7 @@ import {
     ViewIdService
 } from '@netgrif/components-core';
 import {Router} from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'app-login',
@@ -24,32 +24,30 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LoginComponent implements OnInit {
 
-     constructor(private router: Router,
+    constructor(private router: Router,
                 private _userService: UserService,
                 private _snackbar: SnackBarService,
                 private _translate: TranslateService,
                 private _log: LoggerService) {
-        }
-
-      ngOnInit(): void {
-            if (this._userService.user.id.length !== 0) {
-                this.redirectToHome();
-            }
-        }
-
-     onLogin(user: User) {
-            if (user && user.id) {
-                this.redirectToHome();
-            } else {
-                this._snackbar.openErrorSnackBar(this._translate.instant('forms.login.wrongCredentials'));
-            }
     }
 
-     private redirectToHome() {
-         this.router.navigate(['/cases']).then((value) => {
-              this._log.debug('Routed to ' + value);
-          });
+    ngOnInit(): void {
+        if (this._userService.user.id.length !== 0) {
+            this.redirectToHome();
         }
+    }
 
+    onLogin(user: User) {
+        if (user && user.id) {
+            this.redirectToHome();
+        } else {
+            this._snackbar.openErrorSnackBar(this._translate.instant('forms.login.wrongCredentials'));
+        }
+    }
 
+    private redirectToHome() {
+        this.router.navigate(['/']).then((value) => {
+            this._log.debug('Routed to ' + value);
+        });
+    }
 }

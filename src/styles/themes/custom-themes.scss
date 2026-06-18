@@ -3,10 +3,10 @@
 
 $typography: mat.define-typography-config(
     $font-family: 'Roboto, monospace',
-    $headline: mat.define-typography-level(32px, 48px, 700)
+    $headline-1: mat.define-typography-level(32px, 48px, 700)
 );
 
-@include mat.core($typography);
+@include mat.core();
 
 $netgrif-blue: (
     50: #e2eaf0,
@@ -45,11 +45,17 @@ $netgrif-primary: mat.define-palette($netgrif-blue);
 $netgrif-accent: mat.define-palette($netgrif-blue, A200, A100, A400);
 $netgrif-warn: mat.define-palette(mat.$red-palette);
 
-$netgrif-theme: mat.define-light-theme($netgrif-primary, $netgrif-accent, $netgrif-warn);
+$netgrif-theme: mat.define-light-theme((
+    color: (
+        primary: $netgrif-primary,
+        accent: $netgrif-accent,
+        warn: $netgrif-warn,
+    ),
+    typography: $typography,
+    density: 0,
+));
 
 @include mat.all-component-themes($netgrif-theme);
-//@include covalent-theme($theme, $typography);
-
 @include nae-lib-theme($netgrif-theme, $typography);
 
 body {

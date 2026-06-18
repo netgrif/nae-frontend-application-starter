@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '@angular/material' as mat;
 
 $bv-light-primary: (50: #E7F3FD,
     100: #B8DCFA,

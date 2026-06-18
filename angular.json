@@ -20,12 +20,22 @@
                         "outputPath": "dist/template-frontend",
                         "index": "src/index.html",
                         "main": "src/main.ts",
-                        "polyfills": "src/polyfills.ts",
+                        "polyfills": ["zone.js"],
                         "tsConfig": "tsconfig.app.json",
                         "aot": true,
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "node_modules/monaco-editor/min-maps",
+                                "output": "assets/monaco/min-maps"
+                            },
+                            {
+                                "glob": "**/*",
+                                "input": "node_modules/monaco-editor/min",
+                                "output": "assets/monaco/min"
+                            }
                         ],
                         "styles": [
                             "src/styles.scss"
@@ -73,28 +83,28 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "template-frontend:build"
+                        "buildTarget": "template-frontend:build"
                     },
                     "configurations": {
                         "development": {
-                            "browserTarget": "template-frontend:build:development"
+                            "buildTarget": "template-frontend:build:development"
                         },
                         "production": {
-                            "browserTarget": "template-frontend:build:production"
+                            "buildTarget": "template-frontend:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "template-frontend:build"
+                        "buildTarget": "template-frontend:build"
                     }
                 },
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
                         "main": "src/test.ts",
-                        "polyfills": "src/polyfills.ts",
+                        "polyfills": ["zone.js"],
                         "tsConfig": "tsconfig.spec.json",
                         "karmaConfig": "karma.conf.js",
                         "assets": [

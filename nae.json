@@ -52,6 +52,17 @@
                 "path": "login"
             }
         },
+        "dashboard": {
+            "component": {
+                "class": "DashboardComponent",
+                "from": "./views/dashboard/navigation-dashboard-example.component"
+            },
+            "access": "private",
+            "navigation": true,
+            "routing": {
+                "path": "dashboard"
+            }
+        },
         "side-nav": {
             "layout": {
                 "name": "sidenavView",
@@ -72,6 +83,15 @@
                 "path": ""
             },
             "children": {
+                "group-navigation-double-drawer-outlet": {
+                    "layout": {
+                        "name": "groupNavigation"
+                    },
+                    "navigation": false,
+                    "routing": {
+                        "path": "filter"
+                    }
+                },
                 "cases": {
                     "layout": {
                         "name": "caseView",
@@ -102,51 +122,6 @@
                         "path": "tasks"
                     }
                 },
-                "tabViewAllCase": {
-                    "layout": {
-                        "name": "tabView",
-                        "componentName": "tabViewAllCase",
-                        "params": {
-                            "tabs": [
-                                {
-                                    "view": {
-                                        "name": "caseView"
-                                    },
-                                    "label": {
-                                        "icon": "storage",
-                                        "text": "All Cases"
-                                    },
-                                    "canBeClosed": false,
-                                    "order": -2
-                                },
-                                {
-                                    "view": {
-                                        "name": "caseView"
-                                    },
-                                    "label": {
-                                        "icon": "face",
-                                        "text": "My Cases"
-                                    },
-                                    "canBeClosed": false,
-                                    "order": -1
-                                }
-                            ],
-                            "defaultTaskView": {
-                                "view": {
-                                    "name": "taskView"
-                                }
-                            }
-                        }
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "tab",
-                        "title": "Tab View"
-                    },
-                    "routing": {
-                        "path": "tabView"
-                    }
-                },
                 "emptyView": {
                     "layout": {
                         "name": "emptyView",
@@ -167,27 +142,118 @@
                     "navigation": {
                         "icon": "linear_scale",
                         "title": "Workflow",
-                        "translate": true
+                        "translate": true,
+                        "hidden": true
                     },
                     "routing": {
                         "path": "workflows"
                     }
-                },
-                "console": {
-                    "component": {
-                        "class": "RoleAssignmentComponent",
-                        "from": "@netgrif/components"
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "developer_board",
-                        "title": "Console",
-                        "translate": true
-                    },
-                    "routing": {
-                        "path": "console"
-                    }
                 }
+            }
+        },
+        "emptyView": {
+            "layout": {
+                "name": "emptyView",
+                "componentName": "EmptyView"
+            },
+            "access": "private",
+            "navigation": true,
+            "routing": {
+                "path": "empty"
+            }
+        },
+        "console": {
+            "component": {
+                "class": "RoleAssignmentComponent",
+                "from": "@netgrif/components"
+            },
+            "access": "private",
+            "navigation": {
+                "icon": "developer_board",
+                "title": "Console",
+                "translate": true,
+                "hidden": true
+            },
+            "routing": {
+                "path": "console"
+            }
+        },
+        "builder": {
+            "component": {
+                "class": "BuilderTabsExampleComponent",
+                "from": "./views/builder-example/builder-tabs-example.component"
+            },
+            "access": "private",
+            "navigation": true,
+            "routing": {
+                "path": "builder-tabs-view"
+            }
+        },
+        "task-list-view": {
+            "component": {
+                "class": "DefaultSimpleTaskViewComponent"
+            },
+            "access": "private",
+            "routing": {
+                "path": "task-list/:singleCaseId"
+            }
+        },
+        "single-public-task": {
+            "component": {
+                "class": "PublicSingleTaskViewComponent"
+            },
+            "access": "public",
+            "navigation": {
+                "title": "Public view - transition"
+            },
+            "routing": {
+                "path": "process/:petriNetId/:caseId/:transitionId"
+            }
+        },
+        "public-view": {
+            "component": {
+                "class": "PublicTaskViewComponent"
+            },
+            "access": "public",
+            "navigation": {
+                "title": "Public view - task"
+            },
+            "routing": {
+                "path": "process/:petriNetId/:caseId"
+            }
+        },
+        "public-view-case": {
+            "component": {
+                "class": "PublicTaskViewComponent"
+            },
+            "access": "public",
+            "navigation": {
+                "title": "Public view - case"
+            },
+            "routing": {
+                "path": "process/:petriNetId"
+            }
+        },
+        "public-view-workflow": {
+            "component": {
+                "class": "PublicWorkflowViewComponent"
+            },
+            "access": "public",
+            "navigation": {
+                "title": "Public view - process"
+            },
+            "routing": {
+                "path": "process"
+            }
+        },
+        "public-view-resolver": {
+            "component": {
+                "class": "PublicResolverComponent"
+            },
+            "access": "public",
+            "navigation": true,
+            "routing": {
+                "path": "public-resolver"
             }
         }
     },
