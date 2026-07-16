@@ -37,3 +37,32 @@ body {
         background: url(./assets/logo.png) center center no-repeat;
     }
 }
+
+.drawer-content {
+    box-shadow: none !important;
+}
+
+.first-content {
+    box-shadow: none !important;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: rgba(0, 0, 0, 0.12);
+}
+
+.mat-mdc-card {
+    box-shadow: none !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+mat-expansion-panel {
+    box-shadow: none !important;
+    border-style: none solid solid solid !important;
+    border-width: 1px !important;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.panel-first {
+    box-shadow: none !important;
+}

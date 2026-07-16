@@ -19,6 +19,7 @@ import {
     ViewIdService
 } from '@netgrif/components-core';
 import {HeaderComponent} from '@netgrif/components';
+import {TranslateService} from '@ngx-translate/core';
 
 const baseFilterFactory = (injectedData: InjectedTabbedCaseViewData) => {
     return {filter: SimpleFilter.fromCaseQuery({process: {identifier: 'process'}})};
