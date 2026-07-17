@@ -92,61 +92,15 @@
                         "path": "filter"
                     }
                 },
-                "cases": {
-                    "layout": {
-                        "name": "caseView",
-                        "params": {},
-                        "enableCaseTitle": true,
-                        "isCaseTitleRequired": true
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "fact_check",
-                        "title": "All Cases"
-                    },
-                    "routing": {
-                        "path": "cases"
-                    }
-                },
-                "tasks": {
-                    "layout": {
-                        "name": "taskView",
-                        "params": {}
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "assignment",
-                        "title": "All Tasks"
-                    },
-                    "routing": {
-                        "path": "tasks"
-                    }
-                },
-                "emptyView": {
-                    "layout": {
-                        "name": "emptyView",
-                        "componentName": "EmptyView"
+                "profile": {
+                    "component": {
+                        "class": "ProfileComponent",
+                        "from": "@netgrif/components"
                     },
                     "access": "private",
                     "navigation": true,
                     "routing": {
-                        "path": "empty"
-                    }
-                },
-                "workflows": {
-                    "component": {
-                        "class": "WorkflowViewComponent",
-                        "from": "@netgrif/components"
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "linear_scale",
-                        "title": "Workflow",
-                        "translate": true,
-                        "hidden": true
-                    },
-                    "routing": {
-                        "path": "workflows"
+                        "path": "profile"
                     }
                 }
             }

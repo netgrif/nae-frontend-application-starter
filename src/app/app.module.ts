@@ -47,6 +47,7 @@ import {
     BuilderTabbedCaseViewComponent
 } from './views/builder-example/builder-tabbed-case-view/builder-tabbed-case-view.component';
 import {BuilderTabsExampleComponent} from './views/builder-example/builder-tabs-example.component';
+import {ProfileComponent} from "./views/profile/profile.component";
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import {BuilderTabsExampleComponent} from './views/builder-example/builder-tabs-
         SidenavComponent,
         SideNavCasesCaseViewComponent,
         SideNavTasksTaskViewComponent,
-        EmptyViewComponent
+        EmptyViewComponent,
+        ProfileComponent
     ],
     imports: [
         BrowserModule,
