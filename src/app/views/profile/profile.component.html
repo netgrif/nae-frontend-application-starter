@@ -1,0 +1,34 @@
+<div class="login-background">
+    <div fxLayout="row" fxLayoutAlign="center center" class="fill-all-space">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div fxLayout="column" fxLayoutAlign="stretch">
+                <div fxLayout="row" fxLayoutAlign="center" fxFlexOffset="16px">
+                    <mat-card fxFlex="100" class="card-width-limited">
+                        <div fxLayout="column">
+                            <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+                                <span class="form-text">Profile Info</span>
+                            </div>
+                            <div fxFlex fxLayout="column" fxLayoutAlign="center center" class="padding-default netgrif-input netgrif-input-fix">
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <mat-label>{{ 'profile.name' | translate }}</mat-label>
+                                    <input matInput disabled [value]=user.firstName>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <mat-label>{{ 'profile.surname' | translate }}</mat-label>
+                                    <input matInput disabled [value]=user.lastName>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline" class="full-width">
+                                    <mat-label>Email</mat-label>
+                                    <input disabled matInput [value]="user.email">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

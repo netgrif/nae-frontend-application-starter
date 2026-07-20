@@ -11,21 +11,19 @@ import {
     TranslateLibModule,
     ViewService,
 } from '@netgrif/components-core';
-import {FlexLayoutModule, FlexModule} from '@angular/flex-layout';
+import {FlexLayoutModule, FlexModule} from '@ngbracket/ngx-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
     AuthenticationComponentModule,
+    BuilderModule,
     CaseViewComponentModule,
     DashboardComponentModule,
     DialogComponentsModule,
     HeaderComponentModule,
-    ImportNetComponent,
     LoginFormComponentModule,
     NavigationComponentModule,
-    NewCaseComponent,
     PanelComponentModule,
     QuickPanelComponentModule,
-    RoleAssignmentComponent,
     SearchComponentModule,
     SideMenuComponentModule,
     SideMenuContentComponentModule,
@@ -33,7 +31,6 @@ import {
     TabsComponentModule,
     ToolbarComponentModule,
     UserComponentModule,
-    WorkflowViewComponent,
 } from '@netgrif/components';
 import {TemplateFrontendConfigurationService} from './template-frontend-configuration.service';
 import {TemplateFrontendViewService} from './template-frontend-view.service';
@@ -42,34 +39,29 @@ import {SidenavComponent} from './views/side-nav/sidenav.component';
 import {SideNavCasesCaseViewComponent} from './views/side-nav/cases/side-nav-cases-case-view.component';
 import {SideNavTasksTaskViewComponent} from './views/side-nav/tasks/side-nav-tasks-task-view.component';
 import {EmptyViewComponent} from './views/side-nav/emptyView/empty-view.component';
-import {
-    SideNavTabviewallcaseContent0TaskViewComponent
-} from './views/side-nav/tabViewAllCase/content/0/side-nav-tabviewallcase-content0-task-view.component';
-import {
-    SideNavTabviewallcaseContent1CaseViewComponent
-} from './views/side-nav/tabViewAllCase/content/1/side-nav-tabviewallcase-content1-case-view.component';
-import {
-    SideNavTabviewallcaseContent2CaseViewComponent
-} from './views/side-nav/tabViewAllCase/content/2/side-nav-tabviewallcase-content2-case-view.component';
-import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-all-case.component';
 import {ResizableModule} from 'angular-resizable-element';
 import {PieChartModule} from '@swimlane/ngx-charts';
 import {CommonModule} from '@angular/common';
-import {MatDialogModule} from "@angular/material/dialog";
+import {DashboardComponent} from './views/dashboard/dashboard.component';
+import {
+    BuilderTabbedCaseViewComponent
+} from './views/builder-example/builder-tabbed-case-view/builder-tabbed-case-view.component';
+import {BuilderTabsExampleComponent} from './views/builder-example/builder-tabs-example.component';
+import {ProfileComponent} from "./views/profile/profile.component";
 
 
 @NgModule({
     declarations: [
         AppComponent,
         LoginComponent,
+        BuilderTabbedCaseViewComponent,
+        BuilderTabsExampleComponent,
+        DashboardComponent,
         SidenavComponent,
         SideNavCasesCaseViewComponent,
         SideNavTasksTaskViewComponent,
         EmptyViewComponent,
-        SideNavTabviewallcaseContent0TaskViewComponent,
-        SideNavTabviewallcaseContent1CaseViewComponent,
-        SideNavTabviewallcaseContent2CaseViewComponent,
-        TabViewAllCaseComponent,
+        ProfileComponent
     ],
     imports: [
         BrowserModule,
@@ -97,7 +89,7 @@ import {MatDialogModule} from "@angular/material/dialog";
         UserComponentModule,
         PieChartModule,
         CommonModule,
-        MaterialModule,
+        BuilderModule,
         DialogModule,
         DialogComponentsModule,
         SideMenuContentComponentModule
@@ -114,11 +106,7 @@ import {MatDialogModule} from "@angular/material/dialog";
                 enableAsyncRenderingOnTaskExpand: true
             }
         },],
-    bootstrap: [AppComponent],
-    entryComponents: [NewCaseComponent, LoginComponent, SidenavComponent, SideNavCasesCaseViewComponent,
-        SideNavTasksTaskViewComponent, EmptyViewComponent, SideNavTabviewallcaseContent0TaskViewComponent,
-        SideNavTabviewallcaseContent1CaseViewComponent, SideNavTabviewallcaseContent2CaseViewComponent,
-        TabViewAllCaseComponent, WorkflowViewComponent, ImportNetComponent, RoleAssignmentComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
