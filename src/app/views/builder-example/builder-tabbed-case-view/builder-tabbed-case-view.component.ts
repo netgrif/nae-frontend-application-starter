@@ -19,6 +19,7 @@ import {
     ViewIdService
 } from '@netgrif/components-core';
 import {HeaderComponent} from '@netgrif/components';
+import {TranslateService} from '@ngx-translate/core';
 
 const baseFilterFactory = (injectedData: InjectedTabbedCaseViewData) => {
     return {filter: SimpleFilter.fromCaseQuery({process: {identifier: 'process'}})};
@@ -59,13 +60,14 @@ export class BuilderTabbedCaseViewComponent extends AbstractTabbedCaseViewCompon
     constructor(caseViewService: CaseViewService,
                 loggerService: LoggerService,
                 @Optional() overflowService: OverflowService,
-                @Inject(NAE_TAB_DATA) injectedTabData: InjectedTabbedCaseViewData) {
+                @Inject(NAE_TAB_DATA) injectedTabData: InjectedTabbedCaseViewData,
+                translateService: TranslateService) {
         super(caseViewService, loggerService, injectedTabData, overflowService, undefined, undefined, {
             enableCaseTitle: false,
             isCaseTitleRequired: true,
             newCaseButtonConfig: {
-                createCaseButtonTitle: 'New process',
-                createCaseButtonIcon: 'home'
+                createCaseButtonTitle: translateService.instant('workflow.new-process'),
+                createCaseButtonIcon: 'add'
             }
         });
     }
