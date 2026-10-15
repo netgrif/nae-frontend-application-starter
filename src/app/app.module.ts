@@ -15,7 +15,6 @@ import {FlexLayoutModule, FlexModule} from '@ngbracket/ngx-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
     AuthenticationComponentModule,
-    BuilderModule,
     CaseViewComponentModule,
     DashboardComponentModule,
     DialogComponentsModule,
@@ -43,10 +42,6 @@ import {ResizableModule} from 'angular-resizable-element';
 import {PieChartModule} from '@swimlane/ngx-charts';
 import {CommonModule} from '@angular/common';
 import {DashboardComponent} from './views/dashboard/dashboard.component';
-import {
-    BuilderTabbedCaseViewComponent
-} from './views/builder-example/builder-tabbed-case-view/builder-tabbed-case-view.component';
-import {BuilderTabsExampleComponent} from './views/builder-example/builder-tabs-example.component';
 import {ProfileComponent} from "./views/profile/profile.component";
 
 
@@ -54,8 +49,6 @@ import {ProfileComponent} from "./views/profile/profile.component";
     declarations: [
         AppComponent,
         LoginComponent,
-        BuilderTabbedCaseViewComponent,
-        BuilderTabsExampleComponent,
         DashboardComponent,
         SidenavComponent,
         SideNavCasesCaseViewComponent,
@@ -89,7 +82,6 @@ import {ProfileComponent} from "./views/profile/profile.component";
         UserComponentModule,
         PieChartModule,
         CommonModule,
-        BuilderModule,
         DialogModule,
         DialogComponentsModule,
         SideMenuContentComponentModule

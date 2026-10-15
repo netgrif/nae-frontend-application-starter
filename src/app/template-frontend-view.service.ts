@@ -16,8 +16,6 @@ import {
     RoleAssignmentComponent,
     WorkflowViewComponent
 } from '@netgrif/components';
-import { BuilderTabsExampleComponent } from './views/builder-example/builder-tabs-example.component';
-import { BuilderTabbedCaseViewComponent } from './views/builder-example/builder-tabbed-case-view/builder-tabbed-case-view.component';
 import {ProfileComponent} from "./views/profile/profile.component";
 
 
@@ -41,8 +39,6 @@ export class TemplateFrontendViewService extends ViewService {
             {id: 'PublicTaskViewComponent', class: DefaultPublicTaskViewComponent},
             {id: 'PublicWorkflowViewComponent', class: DefaultPublicWorkflowViewComponent},
             {id: 'PublicResolverComponent', class: DefaultPublicResolverComponent},
-            {id: 'BuilderTabsExampleComponent', class: BuilderTabsExampleComponent},
-            {id: 'BuilderTabbedCaseViewComponent', class: BuilderTabbedCaseViewComponent},
             {id: 'ProfileComponent', class: ProfileComponent},
         ], configurationService, router, loggerService);
     }
