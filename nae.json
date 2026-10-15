@@ -102,6 +102,38 @@
                     "routing": {
                         "path": "profile"
                     }
+                },
+                "console": {
+                    "component": {
+                        "class": "RoleAssignmentComponent",
+                        "from": "@netgrif/components"
+                    },
+                    "access": "private",
+                    "navigation": {
+                        "icon": "developer_board",
+                        "title": "Console",
+                        "translate": true,
+                        "hidden": true
+                    },
+                    "routing": {
+                        "path": "console"
+                    }
+                },
+                "workflow": {
+                    "component": {
+                        "class": "WorkflowViewComponent",
+                        "from": "@netgrif/components"
+                    },
+                    "access": "private",
+                    "navigation": {
+                        "icon": "settings",
+                        "title": "Workflow",
+                        "translate": true,
+                        "hidden": true
+                    },
+                    "routing": {
+                        "path": "workflow-view"
+                    }
                 }
             }
         },
@@ -114,33 +146,6 @@
             "navigation": true,
             "routing": {
                 "path": "empty"
-            }
-        },
-        "console": {
-            "component": {
-                "class": "RoleAssignmentComponent",
-                "from": "@netgrif/components"
-            },
-            "access": "private",
-            "navigation": {
-                "icon": "developer_board",
-                "title": "Console",
-                "translate": true,
-                "hidden": true
-            },
-            "routing": {
-                "path": "console"
-            }
-        },
-        "builder": {
-            "component": {
-                "class": "BuilderTabsExampleComponent",
-                "from": "./views/builder-example/builder-tabs-example.component"
-            },
-            "access": "private",
-            "navigation": true,
-            "routing": {
-                "path": "builder-tabs-view"
             }
         },
         "task-list-view": {
