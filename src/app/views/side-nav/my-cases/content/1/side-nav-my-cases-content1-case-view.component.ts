@@ -6,20 +6,21 @@ import {
     CaseViewService,
     CategoryFactory,
     defaultCaseSearchCategoriesFactory,
+    FilterType,
     InjectedTabbedCaseViewData,
     LoggerService,
     NAE_BASE_FILTER,
     NAE_SEARCH_CATEGORIES,
     NAE_TAB_DATA,
+    OverflowService,
     SearchService,
-    SimpleFilter,
-    UserService,
+    SimpleFilter, UserService,
     ViewIdService,
 } from '@netgrif/components-core';
 import {HeaderComponent} from '@netgrif/components';
 
 const localAllowedNetsFactory = (factory: AllowedNetsServiceFactory) => {
-    return factory.createFromArray([]);
+    return factory.createWithAllNets();
 };
 
 const baseFilterFactory = (userService: UserService) => {
@@ -29,9 +30,9 @@ const baseFilterFactory = (userService: UserService) => {
 };
 
 @Component({
-    selector: 'app-side-nav-tabviewallcase-content2-case-view',
-    templateUrl: './side-nav-tabviewallcase-content2-case-view.component.html',
-    styleUrls: ['./side-nav-tabviewallcase-content2-case-view.component.scss'],
+    selector: 'app-side-nav-my-cases-content1-case-view',
+    templateUrl: './side-nav-my-cases-content1-case-view.component.html',
+    styleUrls: ['./side-nav-my-cases-content1-case-view.component.scss'],
     providers: [
         CategoryFactory,
         CaseViewService,
@@ -40,7 +41,6 @@ const baseFilterFactory = (userService: UserService) => {
             provide: NAE_BASE_FILTER,
             useFactory: baseFilterFactory,
             deps: [UserService]
-
         },
         {
             provide: AllowedNetsService,
@@ -48,17 +48,19 @@ const baseFilterFactory = (userService: UserService) => {
             deps: [AllowedNetsServiceFactory]
         },
         ViewIdService,
+        OverflowService,
         {provide: NAE_SEARCH_CATEGORIES, useFactory: defaultCaseSearchCategoriesFactory, deps: [CategoryFactory]},
     ]
 })
-export class SideNavTabviewallcaseContent2CaseViewComponent extends AbstractTabbedCaseViewComponent implements AfterViewInit {
+export class SideNavMyCasesContent1CaseViewComponent extends AbstractTabbedCaseViewComponent implements AfterViewInit {
 
     @ViewChild('header') public caseHeaderComponent: HeaderComponent;
 
     constructor(caseViewService: CaseViewService,
                 loggerService: LoggerService,
+                overflowService: OverflowService,
                 @Inject(NAE_TAB_DATA) injectedTabData: InjectedTabbedCaseViewData) {
-        super(caseViewService, loggerService, injectedTabData, undefined, undefined, undefined, {
+        super(caseViewService, loggerService, injectedTabData, overflowService, undefined, undefined, {
             enableCaseTitle: true,
             isCaseTitleRequired: true
         });

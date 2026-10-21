@@ -52,17 +52,6 @@
                 "path": "login"
             }
         },
-        "dashboard": {
-            "component": {
-                "class": "DashboardComponent",
-                "from": "./views/dashboard/navigation-dashboard-example.component"
-            },
-            "access": "private",
-            "navigation": true,
-            "routing": {
-                "path": "dashboard"
-            }
-        },
         "side-nav": {
             "layout": {
                 "name": "sidenavView",
@@ -135,6 +124,50 @@
                         "path": "workflow-view"
                     }
                 }
+            }
+        },
+        "all-cases": {
+            "component": {
+                "class": "AllCasesTabView",
+                "from": "./views/all-cases/all-cases.component"
+            },
+            "access": "private",
+            "navigation": false,
+            "routing": {
+                "path": "cases"
+            }
+        },
+        "my-cases": {
+            "component": {
+                "class": "MyCasesTabView",
+                "from": "./views/my-cases/my-cases.component"
+            },
+            "access": "private",
+            "navigation": false,
+            "routing": {
+                "path": "my-cases"
+            }
+        },
+        "all-tasks": {
+            "component": {
+                "class": "AllTasks",
+                "from": "./views/all-tasks/all-tasks.component"
+            },
+            "access": "private",
+            "navigation": false,
+            "routing": {
+                "path": "tasks"
+            }
+        },
+        "my-tasks": {
+            "component": {
+                "class": "MyTasks",
+                "from": "./views/my-tasks/my-tasks.component"
+            },
+            "access": "private",
+            "navigation": false,
+            "routing": {
+                "path": "my-tasks"
             }
         },
         "emptyView": {
@@ -246,6 +279,9 @@
         "auth": {
             "logoutRedirect": "login",
             "loginRedirect": "login"
+        },
+        "groupNavigation": {
+            "groupNavigationRoute": "filter"
         },
         "log": {
             "level": "DEBUG",

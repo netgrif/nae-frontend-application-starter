@@ -11,6 +11,7 @@ import {
     NAE_BASE_FILTER,
     NAE_SEARCH_CATEGORIES,
     NAE_TAB_DATA,
+    OverflowService,
     SearchService,
     SimpleFilter,
     ViewIdService,
@@ -28,9 +29,9 @@ const baseFilterFactory = () => {
 };
 
 @Component({
-    selector: 'app-side-nav-tabviewallcase-content1-case-view',
-    templateUrl: './side-nav-tabviewallcase-content1-case-view.component.html',
-    styleUrls: ['./side-nav-tabviewallcase-content1-case-view.component.scss'],
+    selector: 'app-side-nav-all-cases-content1-case-view',
+    templateUrl: './side-nav-all-cases-content1-case-view.component.html',
+    styleUrls: ['./side-nav-all-cases-content1-case-view.component.scss'],
     providers: [
         CategoryFactory,
         CaseViewService,
@@ -45,17 +46,19 @@ const baseFilterFactory = () => {
             deps: [AllowedNetsServiceFactory]
         },
         ViewIdService,
+        OverflowService,
         {provide: NAE_SEARCH_CATEGORIES, useFactory: defaultCaseSearchCategoriesFactory, deps: [CategoryFactory]},
     ]
 })
-export class SideNavTabviewallcaseContent1CaseViewComponent extends AbstractTabbedCaseViewComponent implements AfterViewInit {
+export class SideNavAllCasesContent1CaseViewComponent extends AbstractTabbedCaseViewComponent implements AfterViewInit {
 
     @ViewChild('header') public caseHeaderComponent: HeaderComponent;
 
     constructor(caseViewService: CaseViewService,
                 loggerService: LoggerService,
+                overflowService: OverflowService,
                 @Inject(NAE_TAB_DATA) injectedTabData: InjectedTabbedCaseViewData) {
-        super(caseViewService, loggerService, injectedTabData, undefined, undefined, undefined, {
+        super(caseViewService, loggerService, injectedTabData, overflowService, undefined, undefined, {
             enableCaseTitle: true,
             isCaseTitleRequired: true
         });

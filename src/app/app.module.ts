@@ -35,8 +35,14 @@ import {TemplateFrontendConfigurationService} from './template-frontend-configur
 import {TemplateFrontendViewService} from './template-frontend-view.service';
 import {LoginComponent} from './views/login/login.component';
 import {SidenavComponent} from './views/side-nav/sidenav.component';
-import {SideNavCasesCaseViewComponent} from './views/side-nav/cases/side-nav-cases-case-view.component';
-import {SideNavTasksTaskViewComponent} from './views/side-nav/tasks/side-nav-tasks-task-view.component';
+import {SideNavAllTasksTaskViewComponent} from './views/side-nav/all-tasks/side-nav-all-tasks-task-view.component';
+import {SideNavMyTasksTaskViewComponent} from './views/side-nav/my-tasks/side-nav-my-tasks-task-view.component';
+import {SideNavAllCasesTabViewComponent} from './views/side-nav/all-cases/side-nav-all-cases-tab-view.component';
+import {SideNavAllCasesContent0TaskViewComponent} from './views/side-nav/all-cases/content/0/side-nav-all-cases-content0-task-view.component';
+import {SideNavAllCasesContent1CaseViewComponent} from './views/side-nav/all-cases/content/1/side-nav-all-cases-content1-case-view.component';
+import {SideNavMyCasesTabViewComponent} from './views/side-nav/my-cases/side-nav-my-cases-tab-view.component';
+import {SideNavMyCasesContent0TaskViewComponent} from './views/side-nav/my-cases/content/0/side-nav-my-cases-content0-task-view.component';
+import {SideNavMyCasesContent1CaseViewComponent} from './views/side-nav/my-cases/content/1/side-nav-my-cases-content1-case-view.component';
 import {EmptyViewComponent} from './views/side-nav/emptyView/empty-view.component';
 import {ResizableModule} from 'angular-resizable-element';
 import {PieChartModule} from '@swimlane/ngx-charts';
@@ -51,8 +57,14 @@ import {ProfileComponent} from "./views/profile/profile.component";
         LoginComponent,
         DashboardComponent,
         SidenavComponent,
-        SideNavCasesCaseViewComponent,
-        SideNavTasksTaskViewComponent,
+        SideNavAllTasksTaskViewComponent,
+        SideNavMyTasksTaskViewComponent,
+        SideNavAllCasesTabViewComponent,
+        SideNavAllCasesContent0TaskViewComponent,
+        SideNavAllCasesContent1CaseViewComponent,
+        SideNavMyCasesTabViewComponent,
+        SideNavMyCasesContent0TaskViewComponent,
+        SideNavMyCasesContent1CaseViewComponent,
         EmptyViewComponent,
         ProfileComponent
     ],

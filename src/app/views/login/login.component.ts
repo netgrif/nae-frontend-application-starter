@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {
     CaseResourceService,
     CaseSearchRequestBody,
     DoubleDrawerUtils, DynamicNavigationRouteProviderService, encodeBase64, GroupNavigationConstants,
     LoggerService,
-    NAE_VIEW_ID_SEGMENT, PaginationParams, SimpleFilter,
+    NAE_VIEW_ID_SEGMENT, PaginationParams, RedirectService, SimpleFilter,
     SnackBarService,
     User,
     UserService,
@@ -26,7 +26,7 @@ import {HttpParams} from "@angular/common/http";
         ViewIdService,
     ]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
 
     constructor(private router: Router,
                 private _userService: UserService,
@@ -34,13 +34,8 @@ export class LoginComponent implements OnInit {
                 private _translate: TranslateService,
                 private _log: LoggerService,
                 private _caseResourceService: CaseResourceService,
-                protected _dynamicRoutingService: DynamicNavigationRouteProviderService) {
-    }
-
-    ngOnInit(): void {
-        if (this._userService.user.id.length !== 0) {
-            this.redirectToHome();
-        }
+                protected _dynamicRoutingService: DynamicNavigationRouteProviderService,
+                private _redirect: RedirectService) {
     }
 
     onLogin(user: User) {
@@ -52,9 +47,20 @@ export class LoginComponent implements OnInit {
     }
 
     private redirectToHome() {
+        const context = this._redirect as any;
+        const lastPath = (context._lastIntendedRoute && (context._lastIntendedRoute as any)._routerState) ?
+            (context._lastIntendedRoute as any)._routerState.url : undefined;
+        if (!lastPath || lastPath == '/' || lastPath.endsWith('login') || lastPath.endsWith('console')) {
+            this.redirectToAutoSelectMenuItem();
+        } else {
+            this._redirect.redirect();
+        }
+    }
+
+    private redirectToAutoSelectMenuItem() {
         const searchBody: CaseSearchRequestBody = {
             data: {
-                [GroupNavigationConstants.ITEM_FIELD_ID_NODE_PATH] : "/default-menu-item/all-cases"
+                [GroupNavigationConstants.ITEM_FIELD_ID_IS_AUTO_SELECT] : "true"
             },
             process: {identifier: "menu_item"}
         };

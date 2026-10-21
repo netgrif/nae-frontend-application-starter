@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {SideNavTasksTaskViewComponent} from './side-nav-tasks-task-view.component';
+import {SideNavAllTasksTaskViewComponent} from './side-nav-all-tasks-task-view.component';
 import {
     AuthenticationMethodService,
     ConfigurationService,
@@ -12,9 +12,9 @@ import {HeaderComponentModule, PanelComponentModule} from '@netgrif/components';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TemplateFrontendConfigurationService} from '../../../template-frontend-configuration.service';
 
-describe('SideNavTasksTaskViewComponent', () => {
-    let component: SideNavTasksTaskViewComponent;
-    let fixture: ComponentFixture<SideNavTasksTaskViewComponent>;
+describe('SideNavAllTasksTaskViewComponent', () => {
+    let component: SideNavAllTasksTaskViewComponent;
+    let fixture: ComponentFixture<SideNavAllTasksTaskViewComponent>;
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
@@ -29,13 +29,13 @@ describe('SideNavTasksTaskViewComponent', () => {
                 AuthenticationMethodService,
                 {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService}
             ],
-            declarations: [SideNavTasksTaskViewComponent]
+            declarations: [SideNavAllTasksTaskViewComponent]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(SideNavTasksTaskViewComponent);
+        fixture = TestBed.createComponent(SideNavAllTasksTaskViewComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

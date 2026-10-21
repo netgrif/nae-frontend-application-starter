@@ -11,13 +11,13 @@ import {
     NAE_VIEW_ID_SEGMENT,
     SearchService,
     SimpleFilter,
-    TaskViewService,
+    TaskViewService, UserService,
     ViewIdService
 } from '@netgrif/components-core';
 import {HeaderComponent} from '@netgrif/components';
 
 const localAllowedNetsFactory = (factory: AllowedNetsServiceFactory) => {
-    return factory.createFromConfig('side-nav/tasks');
+    return factory.createWithAllNets();
 };
 
 const baseFilterFactory = () => {
@@ -27,9 +27,9 @@ const baseFilterFactory = () => {
 };
 
 @Component({
-    selector: 'app-side-nav-tasks-task-view',
-    templateUrl: './side-nav-tasks-task-view.component.html',
-    styleUrls: ['./side-nav-tasks-task-view.component.scss'],
+    selector: 'app-side-nav-all-tasks-task-view',
+    templateUrl: './side-nav-all-tasks-task-view.component.html',
+    styleUrls: ['./side-nav-all-tasks-task-view.component.scss'],
     providers: [
         CategoryFactory,
         SearchService,
@@ -52,7 +52,7 @@ const baseFilterFactory = () => {
         {provide: NAE_SEARCH_CATEGORIES, useFactory: defaultTaskSearchCategoriesFactory, deps: [CategoryFactory]},
     ]
 })
-export class SideNavTasksTaskViewComponent extends AbstractTaskViewComponent implements AfterViewInit {
+export class SideNavAllTasksTaskViewComponent extends AbstractTaskViewComponent implements AfterViewInit {
 
     @ViewChild('header') public taskHeaderComponent: HeaderComponent;
 

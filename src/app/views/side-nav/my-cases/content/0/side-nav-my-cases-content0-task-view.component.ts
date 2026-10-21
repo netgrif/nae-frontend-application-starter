@@ -26,9 +26,9 @@ const baseFilterFactory = (injectedTabData: InjectedTabbedTaskViewData) => {
 };
 
 @Component({
-    selector: 'app-side-nav-tabviewallcase-content0-task-view',
-    templateUrl: './side-nav-tabviewallcase-content0-task-view.component.html',
-    styleUrls: ['./side-nav-tabviewallcase-content0-task-view.component.scss'],
+    selector: 'app-side-nav-my-cases-content0-task-view',
+    templateUrl: './side-nav-my-cases-content0-task-view.component.html',
+    styleUrls: ['./side-nav-my-cases-content0-task-view.component.scss'],
     providers: [
         CategoryFactory,
         TaskViewService,
@@ -53,7 +53,7 @@ const baseFilterFactory = (injectedTabData: InjectedTabbedTaskViewData) => {
         {provide: NAE_SEARCH_CATEGORIES, useFactory: defaultTaskSearchCategoriesFactory, deps: [CategoryFactory]},
     ]
 })
-export class SideNavTabviewallcaseContent0TaskViewComponent extends AbstractTabbedTaskViewComponent implements AfterViewInit {
+export class SideNavMyCasesContent0TaskViewComponent extends AbstractTabbedTaskViewComponent implements AfterViewInit {
 
     @ViewChild('header') public taskHeaderComponent: HeaderComponent;
 

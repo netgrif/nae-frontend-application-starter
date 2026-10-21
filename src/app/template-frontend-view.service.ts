@@ -3,8 +3,7 @@ import {Router} from '@angular/router';
 import {ConfigurationService, LoggerService, ViewService} from '@netgrif/components-core';
 import {LoginComponent} from './views/login/login.component';
 import {SidenavComponent} from './views/side-nav/sidenav.component';
-import {SideNavCasesCaseViewComponent} from './views/side-nav/cases/side-nav-cases-case-view.component';
-import {SideNavTasksTaskViewComponent} from './views/side-nav/tasks/side-nav-tasks-task-view.component';
+import {SideNavAllTasksTaskViewComponent} from './views/side-nav/all-tasks/side-nav-all-tasks-task-view.component';
 import {EmptyViewComponent} from './views/side-nav/emptyView/empty-view.component';
 import {
     DashboardComponent,
@@ -17,6 +16,9 @@ import {
     WorkflowViewComponent
 } from '@netgrif/components';
 import {ProfileComponent} from "./views/profile/profile.component";
+import {SideNavAllCasesTabViewComponent} from "./views/side-nav/all-cases/side-nav-all-cases-tab-view.component";
+import {SideNavMyCasesTabViewComponent} from "./views/side-nav/my-cases/side-nav-my-cases-tab-view.component";
+import {SideNavMyTasksTaskViewComponent} from "./views/side-nav/my-tasks/side-nav-my-tasks-task-view.component";
 
 
 @Injectable({
@@ -30,8 +32,10 @@ export class TemplateFrontendViewService extends ViewService {
             {id: 'WorkflowViewComponent', class: WorkflowViewComponent},
             {id: 'DashboardComponent', class: DashboardComponent},
             {id: 'EmptyViewComponent', class: EmptyViewComponent},
-            {id: 'SideNavTasksTaskViewComponent', class: SideNavTasksTaskViewComponent},
-            {id: 'SideNavCasesCaseViewComponent', class: SideNavCasesCaseViewComponent},
+            {id: 'AllTasks', class: SideNavAllTasksTaskViewComponent},
+            {id: 'AllCasesTabView', class: SideNavAllCasesTabViewComponent},
+            {id: 'MyTasks', class: SideNavMyTasksTaskViewComponent},
+            {id: 'MyCasesTabView', class: SideNavMyCasesTabViewComponent},
             {id: 'SidenavComponent', class: SidenavComponent},
             {id: 'LoginComponent', class: LoginComponent},
             {id: 'DefaultSimpleTaskViewComponent', class: DefaultSimpleTaskViewComponent},
