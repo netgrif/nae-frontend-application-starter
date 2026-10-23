@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {NAE_TASK_FORCE_OPEN, NAE_VIEW_ID_SEGMENT, TabContent, ViewIdService} from '@netgrif/components-core';
 import {BuilderTabbedCaseViewComponent} from './builder-tabbed-case-view/builder-tabbed-case-view.component';
 import {
@@ -16,7 +16,7 @@ import {
     ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BuilderTabsExampleComponent implements OnInit {
+export class BuilderTabsExampleComponent {
 
     tabs: Array<TabContent>;
 
@@ -36,9 +36,6 @@ export class BuilderTabsExampleComponent implements OnInit {
                 }
             }
         ];
-    }
-
-    ngOnInit(): void {
     }
 
 }
