@@ -1,18 +1,22 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {SideNavCasesCaseViewComponent} from './side-nav-cases-case-view.component';
+import {NO_ERRORS_SCHEMA} from '@angular/core';
+import {RouterTestingModule} from '@angular/router/testing';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {
     AuthenticationMethodService,
-    CaseHeaderService,
+    AuthenticationService,
     ConfigurationService,
     MaterialModule,
     MockAuthenticationMethodService,
-    NAE_TAB_DATA
+    MockAuthenticationService,
+    MockUserResourceService,
+    TranslateLibModule,
+    UserResourceService
 } from '@netgrif/components-core';
 import {HeaderComponentModule} from '@netgrif/components';
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {TemplateFrontendConfigurationService} from '../../../template-frontend-configuration.service';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('SideNavCasesCaseViewComponent', () => {
     let component: SideNavCasesCaseViewComponent;
@@ -22,29 +26,36 @@ describe('SideNavCasesCaseViewComponent', () => {
         TestBed.configureTestingModule({
             imports: [
                 MaterialModule,
-                HttpClientTestingModule,
+                TranslateLibModule,
                 HeaderComponentModule,
-                BrowserAnimationsModule
+                HttpClientTestingModule,
+                NoopAnimationsModule,
+                RouterTestingModule.withRoutes([])
             ],
             providers: [
                 {provide: AuthenticationMethodService, useClass: MockAuthenticationMethodService},
-                {provide: NAE_TAB_DATA, useValue: {tabViewComponent: undefined, tabViewOrder: 1}},
-                {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService},
-                CaseHeaderService
+                {provide: AuthenticationService, useClass: MockAuthenticationService},
+                {provide: UserResourceService, useClass: MockUserResourceService},
+                {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService}
             ],
             declarations: [SideNavCasesCaseViewComponent],
-            schemas: [CUSTOM_ELEMENTS_SCHEMA]
+            schemas: [NO_ERRORS_SCHEMA]
         })
             .compileComponents();
     }));
 
-    beforeEach(() => {
+    beforeEach(async () => {
         fixture = TestBed.createComponent(SideNavCasesCaseViewComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
+        await fixture.whenStable();
     });
 
     it('should create', () => {
         expect(component).toBeTruthy();
+    });
+
+    afterEach(() => {
+        TestBed.resetTestingModule();
     });
 });
