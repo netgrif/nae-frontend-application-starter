@@ -283,10 +283,20 @@
         "groupNavigation": {
             "groupNavigationRoute": "filter"
         },
+        "routing": {
+            "publicViewPath": "process"
+        },
+        "dataFields": {
+            "defaultNumberFormat": {
+                "decimalSeparator": ",",
+                "groupSeparator": " ",
+                "digitsInfo": "1.2-2"
+            }
+        },
         "log": {
             "level": "DEBUG",
             "logWithDate": true,
-            "serializeExtraParams": true,
+            "serializeParams": true,
             "includeLogLevel": true,
             "publishers": [
                 "console"
