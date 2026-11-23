@@ -1,6 +1,7 @@
-FROM node:22 as build
+FROM node:24-alpine as build
 WORKDIR /app
 COPY . .
+ENV PUPPETEER_SKIP_DOWNLOAD=true
 RUN npm install --legacy-peer-deps
 RUN npm run build
 
