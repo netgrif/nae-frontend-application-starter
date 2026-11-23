@@ -2,12 +2,16 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const appEnv = window.env?.application;
+
 export const environment = {
     production: false,
-    resolve_configuration: window['env']?.['resolve_configuration'] || false,
-    gateway_url: window['env']?.['gateway_url'] || 'http://localhost:8800/api',
-    application_identifier: window['env']?.['application_identifier'] || 'nae',
-    type_identifier: window['env']?.['type_identifier'] || 'default',
+    // The application does not call loadConfiguration(), so resolving the configuration from the backend would leave
+    // config$ empty. Do not expose this through env.js.
+    resolve_configuration: false,
+    gateway_url: appEnv?.gatewayUrl || 'http://localhost:8800/api',
+    application_identifier: appEnv?.applicationIdentifier || 'nae',
+    type_identifier: appEnv?.typeIdentifier || 'default',
 };
 
 /*

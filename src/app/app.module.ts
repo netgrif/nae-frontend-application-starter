@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {
@@ -33,6 +34,7 @@ import {
 } from '@netgrif/components';
 import {TemplateFrontendConfigurationService} from './template-frontend-configuration.service';
 import {TemplateFrontendViewService} from './template-frontend-view.service';
+import {RealmInterceptor} from './realm.interceptor';
 import {LoginComponent} from './views/login/login.component';
 import {SidenavComponent} from './views/side-nav/sidenav.component';
 import {SideNavAllTasksTaskViewComponent} from './views/side-nav/all-tasks/side-nav-all-tasks-task-view.component';
@@ -101,6 +103,7 @@ import {ProfileComponent} from "./views/profile/profile.component";
     providers: [
         {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService},
         {provide: ViewService, useClass: TemplateFrontendViewService},
+        {provide: HTTP_INTERCEPTORS, useClass: RealmInterceptor, multi: true},
         {
             provide: NAE_ASYNC_RENDERING_CONFIGURATION, useValue: {
                 batchSize: 20,

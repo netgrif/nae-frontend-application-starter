@@ -52,5 +52,35 @@ routing and views.
 
 You can find [minimal nae.json configuration here](docs/configuration/nae-minimal.json).
 
+## Runtime configuration
+
+The Docker image is environment agnostic: at container start, `docker/40-env.sh` renders `src/env.template.js` into
+`env.js`, which overrides the bundled `nae.json` before Angular bootstraps. A plain `ng build` ships the empty default
+`src/env.js` from the repository, so the application also works without a container.
+
+| Variable | Configuration key | Default |
+|---|---|---|
+| `API_BASE_URL` | `providers.auth.address` and every `providers.resources[].address` | `http://localhost:8080/api` |
+| `AUTO_RESOLVE_BACKEND_URL` | `autoResolveBackendUrl` — rewrites every provider address to `<origin>/api` | `false` |
+| `LOG_LEVEL` | `services.log.level` | `DEBUG` (from `nae.json`) |
+| `DEFAULT_REALM` | `services.auth.defaultRealm`, sent as the `X-Realm-Id` header on login and signup | `Admin` (from `nae.json`) |
+| `GATEWAY_URL` | `application.gatewayUrl` — used only by the public-configuration endpoint | `http://localhost:8800/api` |
+| `APPLICATION_IDENTIFIER` | `application.applicationIdentifier` — used only by the public-configuration endpoint | `nae` |
+| `TYPE_IDENTIFIER` | `application.typeIdentifier` — used only by the public-configuration endpoint | `default` |
+
+`API_BASE_URL` is the variable a deployment normally sets; `AUTO_RESOLVE_BACKEND_URL=true` is the alternative for a
+deployment where nginx (or an ingress) proxies `/api` on the same origin, and it wins over `API_BASE_URL`.
+`GATEWAY_URL` and the identifiers are inert while `resolve_configuration` is `false`, because the application does not
+call `loadConfiguration()`; `resolve_configuration` itself is therefore not configurable through `env.js` either.
+
+An empty variable is ignored, so the value from `nae.json` stays in effect. Keys under `nae` are dotted paths into
+`nae.json` and must already exist there; an unknown path only logs a warning and the application still starts. Values
+must not contain `"`, `$`, `\` or control characters (including newlines) — the start script rejects them instead of
+writing a broken `env.js`. The script derives the checked variables from `src/env.template.js`, so a new key needs to be
+added only there. Run `sh docker/40-env.test.sh` to verify the script without Docker.
+
+When the backend is on a different origin than the frontend, its CORS configuration must allow the `X-Realm-Id` header
+in `Access-Control-Allow-Headers`; otherwise login and signup fail on the preflight request.
+
 For easier startup
 clone [template project for NAE frontend application](https://github.com/netgrif/nae-frontend-starter)

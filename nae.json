@@ -278,7 +278,8 @@
     "services": {
         "auth": {
             "logoutRedirect": "login",
-            "loginRedirect": "login"
+            "loginRedirect": "login",
+            "defaultRealm": "Admin"
         },
         "groupNavigation": {
             "groupNavigationRoute": "filter"

@@ -1,0 +1,13 @@
+.git
+.gitignore
+.idea
+.vscode
+.angular
+dist
+node_modules
+coverage
+e2e
+out-tsc
+*.log
+.superpowers
+docs
