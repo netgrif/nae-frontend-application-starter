@@ -5,6 +5,7 @@
         "ng": "ng",
         "start": "ng serve --configuration development",
         "build": "ng build --configuration production",
+        "postbuild": "node scripts/postbuild.mjs",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e"

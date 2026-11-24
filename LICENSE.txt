@@ -1,0 +1,260 @@
+                           NETGRIF Community License
+                           Version 2.0, 23.10.2026
+                          https://netgrif.com/license
+
+   This NETGRIF Community License (the "License") sets out the terms on
+   which NETGRIF, s.r.o., with its registered office at Dúbravská cesta
+   14, 841 04 Bratislava – mestská časť Karlova Ves, Slovak Republic,
+   Company ID No.: 50 903 403, registered in the Commercial Register of the
+   Municipal Court Bratislava III, Section Sro, Insert No. 119927/B (the
+   "Licensor"), makes the Software available to You.
+
+   In short
+
+      You may use, copy, modify and share the Software free of charge for
+      development, testing, evaluation, education and other Non-Production
+      Use. You may not use the Software, or anything built on it, in
+      production or to provide products or services to others. Production
+      Use requires a Commercial License from the Licensor.
+
+      This summary is for convenience only. The binding terms are the
+      Sections below.
+
+   1. Acceptance
+
+      By Using the Software, You accept this License and enter into a
+      contract with the Licensor on these terms. If You do not agree, You
+      must not Use the Software.
+
+      If You Use the Software on behalf of a company or another legal
+      entity, You confirm that You are authorised to accept this License on
+      its behalf, and "You" then means that entity.
+
+      If You receive the Software from a third party, in original or
+      modified form, this License applies to Your Use of it.
+
+      If Your intended Use does not comply with this License, You must
+      obtain a Commercial License from the Licensor or refrain from Using
+      the Software.
+
+   2. Definitions
+
+      "Software" means the computer program NETGRIF Application Engine and
+      any other software, source code, object code, documentation, process
+      definitions and related materials that the Licensor makes available
+      under this License, including any updates or new versions released
+      under this License.
+
+      "Use" means any act concerning the Software that requires the
+      Licensor's permission under copyright law, including copying,
+      installing, running, modifying, creating Derivative Works,
+      distributing and making the Software available to the public.
+
+      "Derivative Work" means any work that is based on or derived from the
+      Software, including modifications, extensions and translations of the
+      Software and any work that incorporates the Software or a substantial
+      part of it.
+
+      "Non-Production Use" means Use of the Software solely for one or more
+      of the following purposes: (a) software development, including the
+      development of applications, process definitions and integrations that
+      run on or use the Software; (b) testing, staging, quality assurance
+      and debugging; (c) evaluation, proofs of concept and demonstrations;
+      (d) education, training, academic research and personal learning; in
+      each case in an environment that is not used for Production Use.
+      Non-Production Use does not become Production Use merely because You
+      are a business, because You are paid for development work, or because
+      You are preparing for a future production deployment under a
+      Commercial License.
+
+      "Production Use" means any Use of the Software that is not
+      Non-Production Use, in particular: (a) running the Software, or any
+      application or process running on it, to support real business,
+      administrative, operational or other live processes, with real data,
+      real users or real transactions; (b) Using the Software to provide
+      products or services to third parties, including offering the Software
+      or a Derivative Work as software-as-a-service, platform-as-a-service,
+      hosting, managed or outsourcing service, or otherwise giving third
+      parties access to its functionality; (c) any other Use in the ordinary
+      operations of a business, public body or other organisation that goes
+      beyond Non-Production Use.
+
+      "Commercial License" means a separate written agreement between You
+      and the Licensor that permits Production Use of the Software.
+
+      "You" or "Your" means the individual or legal entity exercising rights
+      under this License.
+
+   3. Grant of License
+
+      Subject to Your compliance with this License, the Licensor grants You
+      a non-exclusive, worldwide, royalty-free, non-transferable and
+      non-sublicensable licence to Use the Software, including to copy,
+      install, run, modify and create Derivative Works of the Software,
+      solely for Non-Production Use.
+
+      The Licensor reserves all rights not expressly granted in this
+      License. No rights to the Licensor's trademarks, trade names, logos or
+      patents are granted under this License.
+
+      Rights that You have under mandatory provisions of applicable law (for
+      example to make a backup copy or to decompile the Software for
+      interoperability purposes within the limits set by law) are not
+      affected by this License.
+
+   4. Restrictions
+
+      Unless the Licensor has granted You a Commercial License or other
+      written permission, You must not:
+
+      a. make Production Use of the Software or of any Derivative Work;
+
+      b. provide the Software or any Derivative Work to third parties as a
+         service, or otherwise use it to provide products or services to
+         third parties;
+
+      c. sell, rent, lease, lend, sublicense or otherwise transfer the
+         Software or Your rights under this License;
+
+      d. remove, alter or obscure any copyright, licence, trademark or other
+         proprietary notices contained in the Software;
+
+      e. use the Licensor's names, logos or trademarks, except as needed to
+         identify the Software and its origin as required by this License; or
+
+      f. Use the Software in breach of applicable law.
+
+   5. Distribution
+
+      You may distribute copies of the Software or of Derivative Works, in
+      source or object code form, provided that:
+
+      a. each copy includes this License in full and unchanged, together
+         with all copyright and other notices contained in the Software;
+
+      b. if You modified the Software, modified files carry a prominent
+         notice stating that You changed them, and You make the source code
+         of Your modifications available to the recipient;
+
+      c. You do not impose any terms on the recipient that are different
+         from or additional to this License, and You do not represent that
+         the Software or any Derivative Work may be used for Production Use
+         without a Commercial License.
+
+      Each recipient of the Software or of a Derivative Work automatically
+      receives a licence from the Licensor under the terms of this License.
+      You remain responsible for Your own Use.
+
+   6. Commercial License
+
+      Production Use of the Software requires a Commercial License. To
+      obtain a Commercial License, or to ask whether Your intended Use
+      requires one, contact the Licensor at sales@netgrif.com or
+      visit https://netgrif.com/contact-us/.
+
+      The Licensor may also make the Software, or specific versions or
+      components of it, available under different terms. Such terms apply
+      only to the extent the Licensor expressly says so.
+
+   7. Contributions
+
+      If You submit a contribution to the Licensor for inclusion in the
+      Software (for example source code, documentation or process
+      definitions submitted through a pull request or issue), You grant the
+      Licensor a perpetual, worldwide, irrevocable, royalty-free and
+      sublicensable licence to use, copy, modify, distribute and make
+      available the contribution and to license it under any terms,
+      including commercial terms, as part of the Software or otherwise. You
+      confirm that You are entitled to grant this licence and that the
+      contribution does not infringe the rights of any third party. This
+      Section applies unless You and the Licensor have agreed otherwise in
+      writing.
+
+   8. Third-Party Components
+
+      The Software includes third-party components, including open-source
+      software, that are licensed under their own terms. Those terms apply
+      to Your Use of the respective components and prevail over this License
+      in case of conflict in relation to such components. The list of
+      third-party components and their licences is contained in the file
+      THIRD-PARTY.txt distributed with the Software.
+
+   9. No Warranty
+
+      THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY
+      OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING ANY WARRANTY OF
+      MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT,
+      ACCURACY OR UNINTERRUPTED OR ERROR-FREE OPERATION, EXCEPT TO THE
+      EXTENT SUCH WARRANTY CANNOT BE EXCLUDED UNDER APPLICABLE LAW. YOU ARE
+      SOLELY RESPONSIBLE FOR DETERMINING WHETHER THE SOFTWARE IS SUITABLE
+      FOR YOUR PURPOSES AND YOU USE IT AT YOUR OWN RISK.
+
+   10. Limitation of Liability
+
+      TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSOR SHALL
+      NOT BE LIABLE TO YOU, ON ANY LEGAL THEORY, FOR ANY DAMAGE ARISING OUT
+      OF OR IN CONNECTION WITH THIS LICENSE OR THE USE OF OR INABILITY TO
+      USE THE SOFTWARE, INCLUDING LOSS OF PROFIT, LOSS OF DATA, BUSINESS
+      INTERRUPTION, COSTS OF SUBSTITUTE SOFTWARE OR SERVICES, AND ANY
+      INDIRECT OR CONSEQUENTIAL DAMAGE, EVEN IF THE LICENSOR HAS BEEN
+      ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+      This exclusion does not apply to damage caused intentionally or to any
+      other liability that cannot be excluded or limited under mandatory
+      provisions of applicable law. Where liability cannot be excluded, it
+      is limited to the maximum extent such law allows.
+
+   11. Term and Termination
+
+      This License takes effect when You first Use the Software and
+      continues until terminated.
+
+      If You breach this License, Your rights under it terminate
+      automatically and with immediate effect. The Licensor may, at its
+      discretion, reinstate Your rights if You cure the breach.
+
+      On termination You must stop all Use of the Software and destroy or
+      delete all copies of the Software and Derivative Works in Your
+      possession or control. Sections 7 to 10 and 13 survive termination.
+
+   12. Versions of the Software and of this License
+
+      This License applies to all versions of the Software that the Licensor
+      publishes on or after 23.10.2026, regardless of their version number.
+      of the Software published before that date under NETGRIF Community License,
+      Version 1.0, remain governed by that licence.
+
+      The Licensor may publish new versions of this License. Each version of
+      the Software is governed by the version of the License distributed
+      with it or referenced in its release. A new version of the License
+      does not apply to versions of the Software You already obtained under
+      a previous version of the License, unless You choose to accept it.
+
+   13. General
+
+      This License is governed by the laws of the Slovak Republic, excluding
+      its conflict-of-laws rules and the United Nations Convention on
+      Contracts for the International Sale of Goods. Any dispute arising out
+      of or in connection with this License shall be resolved by the
+      competent courts of the Slovak Republic.
+
+      This License is the entire agreement between You and the Licensor
+      concerning Non-Production Use of the Software. If You have a
+      Commercial License or another written agreement with the Licensor,
+      that agreement prevails over this License to the extent of any
+      conflict.
+
+      If any provision of this License is held invalid or unenforceable, the
+      remaining provisions remain in effect and the invalid provision shall
+      be replaced by a valid one that comes closest to its purpose. A
+      failure by the Licensor to enforce any provision is not a waiver of
+      it.
+
+      The Licensor may assign this License, in whole or in part, to a
+      successor of its business or to an affiliate. You may not assign it
+      without the Licensor's prior written consent.
+
+      This License is made in the English language. Any translation is for
+      convenience only; the English text prevails.
+
+   END OF LICENSE
